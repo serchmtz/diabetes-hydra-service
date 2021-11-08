@@ -1,0 +1,4452 @@
+{
+  "@context" : {
+    "OtraEscolaridad" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#OtraEscolaridad"
+    },
+    "H01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01A"
+    },
+    "tieneTalla" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneTalla"
+    },
+    "P01BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BD"
+    },
+    "A12CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CX"
+    },
+    "A13" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A13"
+    },
+    "J06BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06BC"
+    },
+    "C05BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05BX"
+    },
+    "G03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03CA"
+    },
+    "L01X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01X"
+    },
+    "M02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02A"
+    },
+    "A14A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A14A"
+    },
+    "tieneEdad" : {
+      "@id" : "http://www.modelo.org/datos#tieneEdad"
+    },
+    "R01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01AX"
+    },
+    "A02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AX"
+    },
+    "V09E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09E"
+    },
+    "V09EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09EB"
+    },
+    "A03AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AE"
+    },
+    "D04AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D04AX"
+    },
+    "L01D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01D"
+    },
+    "N01BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01BX"
+    },
+    "D08AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AC"
+    },
+    "tieneDosisIndicada" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneDosisIndicada"
+    },
+    "C08CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08CA"
+    },
+    "N03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03"
+    },
+    "SCTID" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.diabetes-mexico.org/red#SCTID"
+    },
+    "A12" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12"
+    },
+    "J06BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06BB"
+    },
+    "R05FB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05FB"
+    },
+    "D02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02B"
+    },
+    "L03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03AA"
+    },
+    "V09F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09F"
+    },
+    "Posgrado" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#Posgrado"
+    },
+    "C07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07"
+    },
+    "N05AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AE"
+    },
+    "tieneFormaFarmaceutica" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneFormaFarmaceutica"
+    },
+    "A02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AA"
+    },
+    "V09B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09B"
+    },
+    "A04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A04A"
+    },
+    "M05BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05BX"
+    },
+    "N05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05"
+    },
+    "tieneHDL" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneHDL"
+    },
+    "V03AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AG"
+    },
+    "H02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02AB"
+    },
+    "A11EC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11EC"
+    },
+    "Capsula" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Capsula"
+    },
+    "N01AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AH"
+    },
+    "Forma_Farmaceutica" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Forma_Farmaceutica"
+    },
+    "S01GX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01GX"
+    },
+    "J01CF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01CF"
+    },
+    "J01XC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XC"
+    },
+    "A03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03A"
+    },
+    "J01DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DB"
+    },
+    "J05AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AC"
+    },
+    "H03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03CA"
+    },
+    "Cardiopatia_Isquemica" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Cardiopatia_Isquemica"
+    },
+    "A07F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07F"
+    },
+    "D06B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06B"
+    },
+    "C02LG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LG"
+    },
+    "C05AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05AD"
+    },
+    "C09CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09CA"
+    },
+    "A03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03BB"
+    },
+    "Neurologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Neurologia"
+    },
+    "G03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03BB"
+    },
+    "Comorbilidad" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"
+    },
+    "A11CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11CC"
+    },
+    "P02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02B"
+    },
+    "S02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02"
+    },
+    "Enfermedad" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Enfermedad"
+    },
+    "P03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03AC"
+    },
+    "L03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03AC"
+    },
+    "N05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BA"
+    },
+    "S01JX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01JX"
+    },
+    "L04AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04AD"
+    },
+    "C01EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01EA"
+    },
+    "V04CM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CM"
+    },
+    "Suspension" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Suspension"
+    },
+    "V08DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08DA"
+    },
+    "J01EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01EB"
+    },
+    "A07BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07BB"
+    },
+    "D10BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10BX"
+    },
+    "OtrasEnfermedades" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades"
+    },
+    "M03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03AB"
+    },
+    "V07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AB"
+    },
+    "V07AS" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AS"
+    },
+    "P02DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02DA"
+    },
+    "D06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06"
+    },
+    "J06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06A"
+    },
+    "R03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03AB"
+    },
+    "D08AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AH"
+    },
+    "N01AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AF"
+    },
+    "H01CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01CB"
+    },
+    "C09A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09A"
+    },
+    "Otros_Padecimientos" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"
+    },
+    "G01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01B"
+    },
+    "V09GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09GA"
+    },
+    "A03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AX"
+    },
+    "H05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05AA"
+    },
+    "G01BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01BE"
+    },
+    "V04CH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CH"
+    },
+    "P01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BA"
+    },
+    "B05XC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05XC"
+    },
+    "Discapacidad_Odontologica" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Odontologica"
+    },
+    "A03ED" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03ED"
+    },
+    "S01EE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01EE"
+    },
+    "G03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03AC"
+    },
+    "tieneMedidaCintura" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneMedidaCintura"
+    },
+    "tieneCedulaProfesional" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.personas-mexico.org/persona#tieneCedulaProfesional"
+    },
+    "J07BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BC"
+    },
+    "tieneGlucosaPostPrandial" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneGlucosaPostPrandial"
+    },
+    "S03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03B"
+    },
+    "N03AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AG"
+    },
+    "C01EX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01EX"
+    },
+    "N06BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06BX"
+    },
+    "S01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01A"
+    },
+    "A11B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11B"
+    },
+    "esRedactadaPor" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#esRedactadaPor"
+    },
+    "L01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AD"
+    },
+    "D07XC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07XC"
+    },
+    "tieneCantidadDePrincipioActivo" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneCantidadDePrincipioActivo"
+    },
+    "P01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01CA"
+    },
+    "Otros_Farmacos" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Otros_Farmacos"
+    },
+    "D10AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AE"
+    },
+    "G03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03C"
+    },
+    "H02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02B"
+    },
+    "L01XY" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XY"
+    },
+    "C09BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09BA"
+    },
+    "tieneTratamiento" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneTratamiento"
+    },
+    "D08A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08A"
+    },
+    "C01D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01D"
+    },
+    "R01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01AD"
+    },
+    "J01XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XA"
+    },
+    "tieneAlerta" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneAlerta"
+    },
+    "C03BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BD"
+    },
+    "B05CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05CA"
+    },
+    "D11AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11AF"
+    },
+    "tieneLimiteInferiorDeEdad" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneLimiteInferiorDeEdad"
+    },
+    "B05CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05CB"
+    },
+    "D08AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AA"
+    },
+    "A16A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A16A"
+    },
+    "L02BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02BX"
+    },
+    "R01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01AA"
+    },
+    "Nefrologia_Y_Urologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Nefrologia_Y_Urologia"
+    },
+    "S01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01BC"
+    },
+    "V08CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08CA"
+    },
+    "N05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AA"
+    },
+    "R05X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05X"
+    },
+    "V09AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09AX"
+    },
+    "C02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02BB"
+    },
+    "N05AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AH"
+    },
+    "D09" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D09"
+    },
+    "A12AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12AX"
+    },
+    "tieneAntecedentesGinecoObstetricos" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAntecedentesGinecoObstetricos"
+    },
+    "J07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07A"
+    },
+    "A01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01AC"
+    },
+    "tieneIMC" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneIMC"
+    },
+    "Discapacidad_Comunicacion" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Comunicacion"
+    },
+    "V06C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06C"
+    },
+    "S01EC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01EC"
+    },
+    "A05AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05AX"
+    },
+    "P03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03AA"
+    },
+    "V09GB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09GB"
+    },
+    "A11GB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11GB"
+    },
+    "G01BF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01BF"
+    },
+    "G03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03"
+    },
+    "Neumologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Neumologia"
+    },
+    "B02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02A"
+    },
+    "C04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AB"
+    },
+    "Gel" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Gel"
+    },
+    "Intramuscular" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Intramuscular"
+    },
+    "A07DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07DA"
+    },
+    "D10A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10A"
+    },
+    "N06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06A"
+    },
+    "J01CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01CE"
+    },
+    "P03BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03BX"
+    },
+    "J04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04"
+    },
+    "P01CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01CX"
+    },
+    "N03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AA"
+    },
+    "A03DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03DA"
+    },
+    "N06B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06B"
+    },
+    "R03BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03BX"
+    },
+    "J01EE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01EE"
+    },
+    "B05DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05DB"
+    },
+    "D10BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10BA"
+    },
+    "J07AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AF"
+    },
+    "M01AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AG"
+    },
+    "tieneSegundoApellido" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.personas-mexico.org/persona#tieneSegundoApellido"
+    },
+    "M01AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AE"
+    },
+    "A02BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02BD"
+    },
+    "C02LC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LC"
+    },
+    "J01G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01G"
+    },
+    "R05C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05C"
+    },
+    "P02CF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CF"
+    },
+    "D11AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11AE"
+    },
+    "tieneCantidadIndicada" : {
+      "@id" : "http://www.diabetes-mexico.org/red#tieneCantidadIndicada"
+    },
+    "V07AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AX"
+    },
+    "A07FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07FA"
+    },
+    "A12CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CB"
+    },
+    "N03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AB"
+    },
+    "S03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03CA"
+    },
+    "Dosis_En_Receta" : {
+      "@id" : "http://www.diabetes-mexico.org/red#Dosis_En_Receta"
+    },
+    "tieneTrigliceridos" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneTrigliceridos"
+    },
+    "G02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02AC"
+    },
+    "A07BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07BA"
+    },
+    "L04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04A"
+    },
+    "V06DE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DE"
+    },
+    "V04C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04C"
+    },
+    "A05C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05C"
+    },
+    "D01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01"
+    },
+    "R06AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AX"
+    },
+    "R03AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03AK"
+    },
+    "H01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01AC"
+    },
+    "L02AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02AE"
+    },
+    "C09DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09DB"
+    },
+    "J07AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AX"
+    },
+    "V10AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10AX"
+    },
+    "P01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01A"
+    },
+    "tieneAntecedentesHeredoFamiliares" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAntecedentesHeredoFamiliares"
+    },
+    "A16AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A16AX"
+    },
+    "L02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02BB"
+    },
+    "B06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B06"
+    },
+    "N03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03A"
+    },
+    "V06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06A"
+    },
+    "Contiene_Principio_Activo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Contiene_Principio_Activo"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "J07X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07X"
+    },
+    "C08EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08EA"
+    },
+    "B01AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AE"
+    },
+    "R01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01"
+    },
+    "C03CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03CC"
+    },
+    "A12B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12B"
+    },
+    "V09DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09DA"
+    },
+    "C08CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08CX"
+    },
+    "L02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02B"
+    },
+    "J01DE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DE"
+    },
+    "D05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05A"
+    },
+    "N02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AX"
+    },
+    "D03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03B"
+    },
+    "J07BM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BM"
+    },
+    "J01FF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01FF"
+    },
+    "J04B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04B"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "Medicamento_De_Cuadro_Basico" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Medicamento_De_Cuadro_Basico"
+    },
+    "D03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03"
+    },
+    "D07CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07CD"
+    },
+    "V06CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06CA"
+    },
+    "J01XE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XE"
+    },
+    "R06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06A"
+    },
+    "J07BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BG"
+    },
+    "G03XC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03XC"
+    },
+    "P02CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CC"
+    },
+    "J05AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AF"
+    },
+    "C03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03A"
+    },
+    "J07AR" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AR"
+    },
+    "G04CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04CB"
+    },
+    "P01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BC"
+    },
+    "Historia_Clinica" : {
+      "@id" : "http://www.modelo.org/datos#Historia_Clinica"
+    },
+    "M02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02AB"
+    },
+    "tieneMedidaIndicada" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneMedidaIndicada"
+    },
+    "C03BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BC"
+    },
+    "R05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05"
+    },
+    "G04CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04CX"
+    },
+    "S03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03AA"
+    },
+    "V09DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09DX"
+    },
+    "G01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AB"
+    },
+    "V06DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DC"
+    },
+    "B05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05AA"
+    },
+    "J07AP" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AP"
+    },
+    "tienePrincipioActivoPorPorcion" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tienePrincipioActivoPorPorcion"
+    },
+    "Dosis_Indicada_Para_Adultos" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Dosis_Indicada_Para_Adultos"
+    },
+    "J07AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AC"
+    },
+    "R05D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05D"
+    },
+    "J01D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01D"
+    },
+    "S01H" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01H"
+    },
+    "A11CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11CB"
+    },
+    "N01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AB"
+    },
+    "A04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A04AA"
+    },
+    "tienePresionArterialSistolica" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tienePresionArterialSistolica"
+    },
+    "V09HX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09HX"
+    },
+    "J01MB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01MB"
+    },
+    "A10BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BX"
+    },
+    "S01LA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01LA"
+    },
+    "M09AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M09AA"
+    },
+    "G03DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03DB"
+    },
+    "Riesgo_Embarazo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Riesgo_Embarazo"
+    },
+    "A07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07"
+    },
+    "Depresion" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Depresion"
+    },
+    "H03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03"
+    },
+    "A03CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03CB"
+    },
+    "C02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02"
+    },
+    "C03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03C"
+    },
+    "esSintomaDe" : {
+      "@type" : "@id",
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#esSintomaDe"
+    },
+    "N05BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BB"
+    },
+    "G01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01A"
+    },
+    "M03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03"
+    },
+    "P02CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CE"
+    },
+    "tieneExpedienteClinico" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneExpedienteClinico"
+    },
+    "A06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06A"
+    },
+    "H02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02C"
+    },
+    "S01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01AD"
+    },
+    "G03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03B"
+    },
+    "G03X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03X"
+    },
+    "B01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AC"
+    },
+    "H03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03A"
+    },
+    "A07EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07EB"
+    },
+    "C02N" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02N"
+    },
+    "G04CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04CA"
+    },
+    "J01M" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01M"
+    },
+    "J01CG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01CG"
+    },
+    "M05BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05BC"
+    },
+    "D10B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10B"
+    },
+    "C02KX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02KX"
+    },
+    "C03EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03EB"
+    },
+    "tieneMedidaCadera" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneMedidaCadera"
+    },
+    "N04BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04BX"
+    },
+    "P02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02BA"
+    },
+    "B01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AA"
+    },
+    "N02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AB"
+    },
+    "tieneGlucosaPrePrandial" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneGlucosaPrePrandial"
+    },
+    "C01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01C"
+    },
+    "A07X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07X"
+    },
+    "S02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02CA"
+    },
+    "V10XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10XX"
+    },
+    "D05AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05AC"
+    },
+    "V09XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09XX"
+    },
+    "A10BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BB"
+    },
+    "V04B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04B"
+    },
+    "D02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AA"
+    },
+    "N05C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05C"
+    },
+    "L" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L"
+    },
+    "N01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AX"
+    },
+    "C08C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08C"
+    },
+    "C01DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01DX"
+    },
+    "C10" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10"
+    },
+    "G02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02AX"
+    },
+    "S01KA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01KA"
+    },
+    "A10BF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BF"
+    },
+    "puedeCausar" : {
+      "@type" : "@id",
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#puedeCausar"
+    },
+    "C07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07A"
+    },
+    "M03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03A"
+    },
+    "R06AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AC"
+    },
+    "C05BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05BB"
+    },
+    "D07BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07BC"
+    },
+    "V08D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08D"
+    },
+    "N04BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04BB"
+    },
+    "S01EX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01EX"
+    },
+    "D07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07"
+    },
+    "V04CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CX"
+    },
+    "A05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05B"
+    },
+    "A08A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A08A"
+    },
+    "Crema" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Crema"
+    },
+    "G02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02CA"
+    },
+    "V09CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09CA"
+    },
+    "A01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01AD"
+    },
+    "A06AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AC"
+    },
+    "N04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04AA"
+    },
+    "V07AV" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AV"
+    },
+    "C10BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10BX"
+    },
+    "H01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01AB"
+    },
+    "M03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03BA"
+    },
+    "J01XD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XD"
+    },
+    "D07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07AB"
+    },
+    "N02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02B"
+    },
+    "C01CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01CX"
+    },
+    "C07BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07BG"
+    },
+    "N02AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AE"
+    },
+    "A03DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03DC"
+    },
+    "G04BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04BC"
+    },
+    "Comprimido" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Comprimido"
+    },
+    "Medida_Control" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Medida_Control"
+    },
+    "tieneAntecedentesPersonalesNoPatologicos" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAntecedentesPersonalesNoPatologicos"
+    },
+    "R06AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AB"
+    },
+    "V09C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09C"
+    },
+    "B03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03AA"
+    },
+    "J04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04A"
+    },
+    "V10" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10"
+    },
+    "M03BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03BX"
+    },
+    "J01GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01GA"
+    },
+    "S01FB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01FB"
+    },
+    "J07BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BX"
+    },
+    "D08" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08"
+    },
+    "R07AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R07AX"
+    },
+    "A01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01A"
+    },
+    "A16AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A16AA"
+    },
+    "J07AM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AM"
+    },
+    "V04CG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CG"
+    },
+    "L01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01BB"
+    },
+    "H02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02A"
+    },
+    "J04AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AK"
+    },
+    "C09D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09D"
+    },
+    "C01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01A"
+    },
+    "A03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AA"
+    },
+    "Escolaridad_Basica" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica"
+    },
+    "V06B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06B"
+    },
+    "VIH-SIDA" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#VIH-SIDA"
+    },
+    "C03BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BX"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "C03CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03CD"
+    },
+    "M01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01B"
+    },
+    "D07AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07AD"
+    },
+    "R01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01AB"
+    },
+    "P01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01"
+    },
+    "M04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04A"
+    },
+    "P02DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02DX"
+    },
+    "V09GX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09GX"
+    },
+    "P02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CA"
+    },
+    "G03HA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03HA"
+    },
+    "V09I" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09I"
+    },
+    "P01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01AA"
+    },
+    "C02DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02DA"
+    },
+    "R03DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03DA"
+    },
+    "V10A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10A"
+    },
+    "B05C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05C"
+    },
+    "C08DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08DA"
+    },
+    "R03DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03DC"
+    },
+    "G02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02C"
+    },
+    "R03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03A"
+    },
+    "N03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AX"
+    },
+    "J05AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AB"
+    },
+    "D07B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07B"
+    },
+    "C03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BB"
+    },
+    "C02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02AA"
+    },
+    "J01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01"
+    },
+    "J07BJ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BJ"
+    },
+    "N05BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BC"
+    },
+    "Intoxicaciones" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Intoxicaciones"
+    },
+    "Enfermedades_Inmunoalergicas" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Enfermedades_Inmunoalergicas"
+    },
+    "A06AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AH"
+    },
+    "G04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04"
+    },
+    "J01R" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01R"
+    },
+    "J04AM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AM"
+    },
+    "N05AN" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AN"
+    },
+    "A03EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03EA"
+    },
+    "B03AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03AE"
+    },
+    "N06AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06AB"
+    },
+    "V08CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08CX"
+    },
+    "P02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02"
+    },
+    "J07BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BD"
+    },
+    "R01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01A"
+    },
+    "A10X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10X"
+    },
+    "G01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01BC"
+    },
+    "D11" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11"
+    },
+    "C01CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01CE"
+    },
+    "D05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05AA"
+    },
+    "D09AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D09AB"
+    },
+    "A02AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AH"
+    },
+    "N07CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07CA"
+    },
+    "N06CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06CA"
+    },
+    "M03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03AX"
+    },
+    "tieneFrecuenciaCardiaca" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneFrecuenciaCardiaca"
+    },
+    "G03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03AA"
+    },
+    "A05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05A"
+    },
+    "G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G"
+    },
+    "C03BK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BK"
+    },
+    "G01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AX"
+    },
+    "C02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02AB"
+    },
+    "J01FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01FA"
+    },
+    "D01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01AC"
+    },
+    "Polvo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Polvo"
+    },
+    "G03E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03E"
+    },
+    "S01HA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01HA"
+    },
+    "V10BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10BX"
+    },
+    "C05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05AA"
+    },
+    "S01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01BB"
+    },
+    "R02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02AX"
+    },
+    "H03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03BB"
+    },
+    "tienePorcion" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tienePorcion"
+    },
+    "C08E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08E"
+    },
+    "D10AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AB"
+    },
+    "V09A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09A"
+    },
+    "Hipoglucemiante_Oral" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral"
+    },
+    "J01DD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DD"
+    },
+    "tieneGeneralidades" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneGeneralidades"
+    },
+    "R05CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05CB"
+    },
+    "V07AR" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AR"
+    },
+    "P03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03AX"
+    },
+    "C07D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07D"
+    },
+    "G02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02BB"
+    },
+    "G01BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01BD"
+    },
+    "D10AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AX"
+    },
+    "D10AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AD"
+    },
+    "C10BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10BA"
+    },
+    "H02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02"
+    },
+    "N05CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CA"
+    },
+    "N02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02CA"
+    },
+    "G03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03A"
+    },
+    "J" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J"
+    },
+    "S01K" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01K"
+    },
+    "J01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01CA"
+    },
+    "D08AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AX"
+    },
+    "N02CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02CB"
+    },
+    "R03BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03BC"
+    },
+    "V07AY" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AY"
+    },
+    "C02DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02DC"
+    },
+    "Via_De_Administracion" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Via_De_Administracion"
+    },
+    "D08AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AB"
+    },
+    "C07F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07F"
+    },
+    "N06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06AA"
+    },
+    "R02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02AB"
+    },
+    "C03CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03CB"
+    },
+    "V10X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10X"
+    },
+    "D07AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07AC"
+    },
+    "A02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02B"
+    },
+    "Cancer" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Cancer"
+    },
+    "A11AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11AA"
+    },
+    "C07CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07CA"
+    },
+    "A03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03B"
+    },
+    "V08AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08AD"
+    },
+    "tieneFrecuenciaIndicadaEnReceta" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicadaEnReceta"
+    },
+    "L01XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XA"
+    },
+    "tieneIndicacionParaPadecimiento" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneIndicacionParaPadecimiento"
+    },
+    "L04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04AA"
+    },
+    "A03E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03E"
+    },
+    "N04B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04B"
+    },
+    "Tratamiento_Farmacologico" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"
+    },
+    "C03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03CA"
+    },
+    "M" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M"
+    },
+    "G03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03BA"
+    },
+    "J05AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AH"
+    },
+    "M01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AX"
+    },
+    "H01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01AA"
+    },
+    "J07AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AD"
+    },
+    "V08CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08CB"
+    },
+    "C07C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07C"
+    },
+    "C02LB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LB"
+    },
+    "A10A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10A"
+    },
+    "D02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AB"
+    },
+    "M01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AB"
+    },
+    "N05CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CE"
+    },
+    "B01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AX"
+    },
+    "V08AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08AC"
+    },
+    "V01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V01AA"
+    },
+    "C01BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01BD"
+    },
+    "A10AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10AB"
+    },
+    "H02BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02BX"
+    },
+    "A13A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A13A"
+    },
+    "A11H" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11H"
+    },
+    "Discapacidad_Auditiva" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Auditiva"
+    },
+    "Locion" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Locion"
+    },
+    "R05F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05F"
+    },
+    "A02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02"
+    },
+    "S01EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01EB"
+    },
+    "S02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02BA"
+    },
+    "D08AJ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AJ"
+    },
+    "D07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07AA"
+    },
+    "J07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07"
+    },
+    "N05CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CC"
+    },
+    "V04CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CB"
+    },
+    "A07EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07EA"
+    },
+    "P01CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01CD"
+    },
+    "Otras_Formas_Solidas" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Otras_Formas_Solidas"
+    },
+    "C03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03AA"
+    },
+    "R03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03C"
+    },
+    "P01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01AX"
+    },
+    "Evento_Cerebrovascular" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Evento_Cerebrovascular"
+    },
+    "A11EX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11EX"
+    },
+    "C05CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05CA"
+    },
+    "N07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07AA"
+    },
+    "S02D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02D"
+    },
+    "C07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07AB"
+    },
+    "Ejercicio" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Ejercicio"
+    },
+    "J07BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BE"
+    },
+    "C02DG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02DG"
+    },
+    "A10BH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BH"
+    },
+    "V03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AC"
+    },
+    "G03CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03CC"
+    },
+    "A11D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11D"
+    },
+    "S" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S"
+    },
+    "C09DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09DA"
+    },
+    "D09AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D09AX"
+    },
+    "A10" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10"
+    },
+    "M02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02"
+    },
+    "S02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02AA"
+    },
+    "N07BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07BC"
+    },
+    "B02BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02BD"
+    },
+    "Dieta" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Dieta"
+    },
+    "C04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AA"
+    },
+    "N01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01BB"
+    },
+    "C09AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09AA"
+    },
+    "C03E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03E"
+    },
+    "R06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06"
+    },
+    "N07XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07XX"
+    },
+    "A11EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11EB"
+    },
+    "N05AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AX"
+    },
+    "M04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04"
+    },
+    "J01DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DC"
+    },
+    "V09HB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09HB"
+    },
+    "P02BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02BX"
+    },
+    "tienePronostico" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tienePronostico"
+    },
+    "G02CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02CB"
+    },
+    "Dislipidemia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Dislipidemia"
+    },
+    "C02KB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02KB"
+    },
+    "L02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02A"
+    },
+    "A14AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A14AB"
+    },
+    "R06AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AE"
+    },
+    "A14B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A14B"
+    },
+    "C07DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07DA"
+    },
+    "R05FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05FA"
+    },
+    "L03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03"
+    },
+    "Implante" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Implante"
+    },
+    "H03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03B"
+    },
+    "G03FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03FA"
+    },
+    "Gastroenterologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Gastroenterologia"
+    },
+    "L01DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01DC"
+    },
+    "J05AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AE"
+    },
+    "tieneBiotipo" : {
+      "@type" : "@id",
+      "@id" : "http://www.modelo.org/datos#tieneBiotipo"
+    },
+    "C07DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07DB"
+    },
+    "D06C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06C"
+    },
+    "J04BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04BA"
+    },
+    "A08AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A08AB"
+    },
+    "V07AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AD"
+    },
+    "N02CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02CC"
+    },
+    "D07BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07BD"
+    },
+    "Retinopatia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Retinopatia"
+    },
+    "S01X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01X"
+    },
+    "A12CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CA"
+    },
+    "Dosis_Indicada" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Dosis_Indicada"
+    },
+    "N06AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06AF"
+    },
+    "J07BH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BH"
+    },
+    "C03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03BA"
+    },
+    "P01AR" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01AR"
+    },
+    "C03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03"
+    },
+    "A10B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10B"
+    },
+    "H" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H"
+    },
+    "Unguento" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Unguento"
+    },
+    "B05XB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05XB"
+    },
+    "M05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05"
+    },
+    "P03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03AB"
+    },
+    "D10AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AF"
+    },
+    "R01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01AC"
+    },
+    "J01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01C"
+    },
+    "C04AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AX"
+    },
+    "tieneFrecuenciaEnHoras" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneFrecuenciaEnHoras"
+    },
+    "D06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06AA"
+    },
+    "B05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05"
+    },
+    "A11J" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11J"
+    },
+    "Persona" : {
+      "@id" : "http://www.personas-mexico.org/persona#Persona"
+    },
+    "H04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H04A"
+    },
+    "R06AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AK"
+    },
+    "C01DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01DB"
+    },
+    "D05BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05BB"
+    },
+    "C01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01"
+    },
+    "D05AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05AD"
+    },
+    "L01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01BC"
+    },
+    "C07BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07BA"
+    },
+    "H02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02CA"
+    },
+    "L02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02BA"
+    },
+    "tieneActivoEnReceta" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneActivoEnReceta"
+    },
+    "N05BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BX"
+    },
+    "M04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04AB"
+    },
+    "M03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03CA"
+    },
+    "H01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01BB"
+    },
+    "A07BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07BC"
+    },
+    "Cetoacidosis" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Cetoacidosis"
+    },
+    "C01DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01DA"
+    },
+    "D01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01AA"
+    },
+    "C07FB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07FB"
+    },
+    "J07B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07B"
+    },
+    "C07EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07EA"
+    },
+    "A12CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CD"
+    },
+    "D07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07A"
+    },
+    "V09EX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09EX"
+    },
+    "B05XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05XX"
+    },
+    "G04BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04BX"
+    },
+    "V10XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10XA"
+    },
+    "S01JA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01JA"
+    },
+    "A11EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11EA"
+    },
+    "S01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01"
+    },
+    "G03F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03F"
+    },
+    "J01X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01X"
+    },
+    "tieneCantidadMaxima" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneCantidadMaxima"
+    },
+    "C09BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09BB"
+    },
+    "J02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02AA"
+    },
+    "V04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04"
+    },
+    "C03DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03DA"
+    },
+    "D04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D04A"
+    },
+    "G03DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03DC"
+    },
+    "V07AT" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AT"
+    },
+    "A10AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10AD"
+    },
+    "Neuropatia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Neuropatia"
+    },
+    "C02KC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02KC"
+    },
+    "L01CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01CX"
+    },
+    "M02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02AA"
+    },
+    "J07BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BA"
+    },
+    "A04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A04"
+    },
+    "V03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03"
+    },
+    "A02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AC"
+    },
+    "C07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07AA"
+    },
+    "P01CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01CC"
+    },
+    "Anestesia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Anestesia"
+    },
+    "V03AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AH"
+    },
+    "C05AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05AB"
+    },
+    "M04AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04AC"
+    },
+    "B02BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02BX"
+    },
+    "C02KA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02KA"
+    },
+    "S03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03BA"
+    },
+    "C04AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AE"
+    },
+    "A15" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A15"
+    },
+    "B05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05A"
+    },
+    "Solucion" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Solucion"
+    },
+    "R03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03"
+    },
+    "A03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03C"
+    },
+    "B05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05BA"
+    },
+    "N02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02BB"
+    },
+    "J04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AA"
+    },
+    "A08" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A08"
+    },
+    "J05AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AD"
+    },
+    "L03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03AB"
+    },
+    "J01DF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DF"
+    },
+    "L01CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01CB"
+    },
+    "Subcutanea" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Subcutanea"
+    },
+    "Proceso_Infeccioso" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Proceso_Infeccioso"
+    },
+    "R02AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02AD"
+    },
+    "Oncología" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Oncología"
+    },
+    "C08DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08DB"
+    },
+    "Gragea" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Gragea"
+    },
+    "G02CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02CX"
+    },
+    "N03AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AD"
+    },
+    "G03CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03CB"
+    },
+    "V09AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09AB"
+    },
+    "Reumatologia_Y_Traumatología" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Reumatologia_Y_Traumatología"
+    },
+    "N06C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06C"
+    },
+    "L01XC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XC"
+    },
+    "tieneHbA1" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneHbA1"
+    },
+    "Vacunas_Toxoides_Inmunoglobulinas_Antitoxinas" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Vacunas_Toxoides_Inmunoglobulinas_Antitoxinas"
+    },
+    "H01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01CA"
+    },
+    "N06DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06DX"
+    },
+    "N05AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AD"
+    },
+    "Cardiopatia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Cardiopatia"
+    },
+    "R" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R"
+    },
+    "tieneFecha" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#date",
+      "@id" : "http://www.modelo.org/datos#tieneFecha"
+    },
+    "V09CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09CX"
+    },
+    "J01F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01F"
+    },
+    "S01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01C"
+    },
+    "Cardiologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Cardiologia"
+    },
+    "D02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02BA"
+    },
+    "D10AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10AA"
+    },
+    "Granulado" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Granulado"
+    },
+    "M01AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AH"
+    },
+    "A09AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A09AA"
+    },
+    "G02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02"
+    },
+    "C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C"
+    },
+    "J01EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01EA"
+    },
+    "V09AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09AA"
+    },
+    "J02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02AB"
+    },
+    "D03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03BA"
+    },
+    "D02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AC"
+    },
+    "M09" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M09"
+    },
+    "R03CK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03CK"
+    },
+    "G03FB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03FB"
+    },
+    "R05CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05CA"
+    },
+    "tienePorcionesPorEnvase" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tienePorcionesPorEnvase"
+    },
+    "P01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01AB"
+    },
+    "B05BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05BC"
+    },
+    "A16AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A16AB"
+    },
+    "B05CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05CX"
+    },
+    "D05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05BA"
+    },
+    "H05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05"
+    },
+    "B01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AB"
+    },
+    "C03CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03CX"
+    },
+    "V08AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08AA"
+    },
+    "A11DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11DA"
+    },
+    "Medicamento" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Medicamento"
+    },
+    "A03CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03CC"
+    },
+    "S01KX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01KX"
+    },
+    "D07CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07CC"
+    },
+    "C10AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10AD"
+    },
+    "L01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AC"
+    },
+    "M04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04AA"
+    },
+    "M01CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01CB"
+    },
+    "P03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03BA"
+    },
+    "B03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03A"
+    },
+    "D02AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AF"
+    },
+    "B03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03AB"
+    },
+    "D04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D04AB"
+    },
+    "tieneViaDeAdministracion" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneViaDeAdministracion"
+    },
+    "B05BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05BB"
+    },
+    "N02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02"
+    },
+    "H03BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03BC"
+    },
+    "G03H" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03H"
+    },
+    "B06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B06A"
+    },
+    "tieneMedidaIndicadaEnReceta" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneMedidaIndicadaEnReceta"
+    },
+    "A03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03CA"
+    },
+    "C02CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02CC"
+    },
+    "L02BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02BG"
+    },
+    "B05ZB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05ZB"
+    },
+    "tieneLimiteSuperiorDeEdad" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneLimiteSuperiorDeEdad"
+    },
+    "C05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05A"
+    },
+    "P03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03"
+    },
+    "A10AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10AF"
+    },
+    "G03EK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03EK"
+    },
+    "Discapacidad_Autocuidado" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Autocuidado"
+    },
+    "P02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02C"
+    },
+    "D02AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AE"
+    },
+    "L01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01BA"
+    },
+    "D10" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D10"
+    },
+    "J07BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BB"
+    },
+    "D06BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06BB"
+    },
+    "R01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01BA"
+    },
+    "N01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01A"
+    },
+    "tienePeso" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tienePeso"
+    },
+    "N07BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07BB"
+    },
+    "tieneAnalisis" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAnalisis"
+    },
+    "A12AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12AA"
+    },
+    "B03XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03XA"
+    },
+    "J05AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AX"
+    },
+    "D02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02A"
+    },
+    "M01CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01CC"
+    },
+    "L01CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01CD"
+    },
+    "V09X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09X"
+    },
+    "M09AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M09AX"
+    },
+    "C05C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05C"
+    },
+    "C03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03AX"
+    },
+    "C08G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08G"
+    },
+    "J04AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AD"
+    },
+    "R03CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03CA"
+    },
+    "B05Z" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05Z"
+    },
+    "tieneFrecuenciaEnHorasMinima" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneFrecuenciaEnHorasMinima"
+    },
+    "A07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07AB"
+    },
+    "B03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03"
+    },
+    "C01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01AB"
+    },
+    "L04AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04AC"
+    },
+    "P02CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CB"
+    },
+    "B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B"
+    },
+    "A05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05"
+    },
+    "D07CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07CA"
+    },
+    "D11A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11A"
+    },
+    "Obesidad" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Obesidad"
+    },
+    "Emulsion" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Emulsion"
+    },
+    "H01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01AX"
+    },
+    "V03AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AF"
+    },
+    "J01E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01E"
+    },
+    "G01AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AE"
+    },
+    "V06D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06D"
+    },
+    "A03AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AD"
+    },
+    "L01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AX"
+    },
+    "A01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01AB"
+    },
+    "Via_Respiratoria" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Via_Respiratoria"
+    },
+    "S01EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01EA"
+    },
+    "A11C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11C"
+    },
+    "N06AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06AG"
+    },
+    "A05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05BA"
+    },
+    "A02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02BA"
+    },
+    "G03DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03DA"
+    },
+    "L04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04AB"
+    },
+    "Tableta" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Tableta"
+    },
+    "R03CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03CC"
+    },
+    "L01XE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XE"
+    },
+    "C07CG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07CG"
+    },
+    "N04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04"
+    },
+    "A06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AA"
+    },
+    "tieneEscolaridad" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneEscolaridad"
+    },
+    "C05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05BA"
+    },
+    "N02AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AG"
+    },
+    "Hipertensión" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Hipertensión"
+    },
+    "A12A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12A"
+    },
+    "C09" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09"
+    },
+    "P02D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02D"
+    },
+    "S01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01BA"
+    },
+    "M01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01A"
+    },
+    "D08AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AE"
+    },
+    "B05ZA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05ZA"
+    },
+    "R06AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AD"
+    },
+    "D06BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06BA"
+    },
+    "C02LK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LK"
+    },
+    "R01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R01B"
+    },
+    "J02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02"
+    },
+    "Via_Topica" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Via_Topica"
+    },
+    "G04C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04C"
+    },
+    "tienePresionArterialDistolica" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tienePresionArterialDistolica"
+    },
+    "Medico" : {
+      "@id" : "http://www.personas-mexico.org/persona#Medico"
+    },
+    "Diabetes_Mellitus" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Diabetes_Mellitus"
+    },
+    "C07EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07EB"
+    },
+    "C09B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09B"
+    },
+    "J01CR" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01CR"
+    },
+    "J07AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AE"
+    },
+    "M03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03BB"
+    },
+    "M09A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M09A"
+    },
+    "L01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01"
+    },
+    "C02D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02D"
+    },
+    "V09BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09BA"
+    },
+    "Cutanea" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Cutanea"
+    },
+    "C02DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02DB"
+    },
+    "J01DI" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DI"
+    },
+    "A07EC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07EC"
+    },
+    "J01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01BA"
+    },
+    "C01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01B"
+    },
+    "A11JA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11JA"
+    },
+    "C03D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03D"
+    },
+    "V07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07"
+    },
+    "N06AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06AX"
+    },
+    "V06DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DA"
+    },
+    "B06AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B06AB"
+    },
+    "tieneNombre" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.personas-mexico.org/persona#tieneNombre"
+    },
+    "C02LE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LE"
+    },
+    "D01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01A"
+    },
+    "N07B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07B"
+    },
+    "D07BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07BB"
+    },
+    "C02LL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LL"
+    },
+    "H02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H02AA"
+    },
+    "N07X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07X"
+    },
+    "J07BL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BL"
+    },
+    "C01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01BA"
+    },
+    "C02K" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02K"
+    },
+    "D08AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AK"
+    },
+    "G03GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03GA"
+    },
+    "V09IX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09IX"
+    },
+    "Otras_Comorbilidades" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Otras_Comorbilidades"
+    },
+    "S01XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01XA"
+    },
+    "P02CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02CX"
+    },
+    "redactaNotaMedica" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#redactaNotaMedica"
+    },
+    "A11HA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11HA"
+    },
+    "H01CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01CC"
+    },
+    "A10AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10AE"
+    },
+    "D02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AX"
+    },
+    "V06DD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DD"
+    },
+    "D07XD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07XD"
+    },
+    "P03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03A"
+    },
+    "D01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01B"
+    },
+    "N01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01BC"
+    },
+    "R03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03AA"
+    },
+    "V06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06"
+    },
+    "B05DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05DA"
+    },
+    "D07C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07C"
+    },
+    "G03CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03CX"
+    },
+    "N01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AA"
+    },
+    "tieneDiagnostico" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneDiagnostico"
+    },
+    "N05CM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CM"
+    },
+    "C03DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03DB"
+    },
+    "C08" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08"
+    },
+    "R03AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03AH"
+    },
+    "P" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P"
+    },
+    "B02BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02BC"
+    },
+    "N07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07"
+    },
+    "A12C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12C"
+    },
+    "Otras_Formas_Semisolidas" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Otras_Formas_Semisolidas"
+    },
+    "B02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02BA"
+    },
+    "J06B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06B"
+    },
+    "M01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01"
+    },
+    "R03DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03DX"
+    },
+    "H03BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03BX"
+    },
+    "Uropatia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Uropatia"
+    },
+    "tieneAntecedentesPersonalesPatologicos" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAntecedentesPersonalesPatologicos"
+    },
+    "G04BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04BA"
+    },
+    "A11CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11CA"
+    },
+    "M04AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M04AX"
+    },
+    "L01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01C"
+    },
+    "R03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03B"
+    },
+    "J04AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AC"
+    },
+    "A11JC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11JC"
+    },
+    "N02AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AF"
+    },
+    "N02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AC"
+    },
+    "H05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05A"
+    },
+    "C05CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05CX"
+    },
+    "S01ED" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01ED"
+    },
+    "J01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01A"
+    },
+    "B03X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03X"
+    },
+    "B03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03BA"
+    },
+    "C02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02B"
+    },
+    "H01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01C"
+    },
+    "H05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05B"
+    },
+    "N02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AA"
+    },
+    "P02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P02BB"
+    },
+    "A01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01AA"
+    },
+    "N03AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AE"
+    },
+    "Tuberculosis" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Tuberculosis"
+    },
+    "J07C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07C"
+    },
+    "C01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01BB"
+    },
+    "A02AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AD"
+    },
+    "G02CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02CC"
+    },
+    "C03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03AB"
+    },
+    "N07XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07XA"
+    },
+    "J01EC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01EC"
+    },
+    "tieneFrecuenciaEnHorasMaxima" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneFrecuenciaEnHorasMaxima"
+    },
+    "J01MA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01MA"
+    },
+    "V07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AA"
+    },
+    "G01AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AG"
+    },
+    "S01GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01GA"
+    },
+    "G02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02BA"
+    },
+    "R03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03AC"
+    },
+    "V" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V"
+    },
+    "V04CF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CF"
+    },
+    "B02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02AB"
+    },
+    "Via_Parental" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Via_Parental"
+    },
+    "A10BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BA"
+    },
+    "S01G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01G"
+    },
+    "G02AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02AD"
+    },
+    "P01BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BX"
+    },
+    "V10AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10AA"
+    },
+    "V09G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09G"
+    },
+    "J01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01AA"
+    },
+    "A08AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A08AA"
+    },
+    "J05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05"
+    },
+    "A07XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07XA"
+    },
+    "S03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03C"
+    },
+    "V09XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09XA"
+    },
+    "B02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02AA"
+    },
+    "G03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03AB"
+    },
+    "G03HB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03HB"
+    },
+    "Analgesia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Analgesia"
+    },
+    "A10XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10XA"
+    },
+    "M01CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01CX"
+    },
+    "C04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04A"
+    },
+    "tieneMedidaDeEdad" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneMedidaDeEdad"
+    },
+    "C01E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01E"
+    },
+    "A02AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AG"
+    },
+    "Otras_Vias_Extravasculares" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Otras_Vias_Extravasculares"
+    },
+    "D11AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11AA"
+    },
+    "V03AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AK"
+    },
+    "V09DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09DB"
+    },
+    "A08AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A08AX"
+    },
+    "Padecimiento" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Padecimiento"
+    },
+    "R02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02"
+    },
+    "J07AL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AL"
+    },
+    "tieneCreatininaSerica" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneCreatininaSerica"
+    },
+    "G03GB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03GB"
+    },
+    "M03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03AA"
+    },
+    "D07BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07BA"
+    },
+    "A02BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02BX"
+    },
+    "V09EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09EA"
+    },
+    "tieneCodigoATC" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneCodigoATC"
+    },
+    "M03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03B"
+    },
+    "A06AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AX"
+    },
+    "C07AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07AG"
+    },
+    "N02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02A"
+    },
+    "J02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02A"
+    },
+    "D09AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D09AA"
+    },
+    "D05AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05AX"
+    },
+    "C03AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03AH"
+    },
+    "C04AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AC"
+    },
+    "C10AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10AC"
+    },
+    "G02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02B"
+    },
+    "V04CL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CL"
+    },
+    "V06DF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DF"
+    },
+    "Forma_Solida" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Forma_Solida"
+    },
+    "A09" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A09"
+    },
+    "N05AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AG"
+    },
+    "B03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03BB"
+    },
+    "Discapacidad_Aprendizaje" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Aprendizaje"
+    },
+    "Principio_Activo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Principio_Activo"
+    },
+    "C01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01CA"
+    },
+    "J05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05A"
+    },
+    "J07AK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AK"
+    },
+    "D07XB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07XB"
+    },
+    "N01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01BA"
+    },
+    "S01J" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01J"
+    },
+    "Escolaridad_Media_Superior" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Media_Superior"
+    },
+    "A02X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02X"
+    },
+    "G03EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03EA"
+    },
+    "G01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AA"
+    },
+    "C02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02AC"
+    },
+    "P03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P03B"
+    },
+    "V08AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08AB"
+    },
+    "C09DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09DX"
+    },
+    "tienePrincipioActivo" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tienePrincipioActivo"
+    },
+    "J07BK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BK"
+    },
+    "D08AL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AL"
+    },
+    "C02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02BA"
+    },
+    "L03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03AX"
+    },
+    "D01AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01AE"
+    },
+    "H05BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05BX"
+    },
+    "N07AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07AX"
+    },
+    "Grupo_Terapeutico" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Grupo_Terapeutico"
+    },
+    "D08AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AF"
+    },
+    "R06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R06AA"
+    },
+    "M03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03C"
+    },
+    "J01RA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01RA"
+    },
+    "A09AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A09AC"
+    },
+    "N05CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CX"
+    },
+    "S02DC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02DC"
+    },
+    "N06DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06DA"
+    },
+    "N01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01B"
+    },
+    "Forma_Liquida" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Forma_Liquida"
+    },
+    "N04BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04BA"
+    },
+    "N02CX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02CX"
+    },
+    "Forma_Semisolida" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Forma_Semisolida"
+    },
+    "C01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01AC"
+    },
+    "A03DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03DB"
+    },
+    "S01CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01CB"
+    },
+    "A07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07AA"
+    },
+    "N05CH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CH"
+    },
+    "G03XB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03XB"
+    },
+    "tienePrimerApellido" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.personas-mexico.org/persona#tienePrimerApellido"
+    },
+    "S02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02B"
+    },
+    "N06D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06D"
+    },
+    "D06BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06BX"
+    },
+    "A03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03BA"
+    },
+    "N04A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04A"
+    },
+    "D06AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06AX"
+    },
+    "A09A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A09A"
+    },
+    "A10BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BD"
+    },
+    "S03D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03D"
+    },
+    "tieneSexo" : {
+      "@id" : "http://www.personas-mexico.org/persona#tieneSexo"
+    },
+    "J01ED" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01ED"
+    },
+    "R07" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R07"
+    },
+    "C01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01AA"
+    },
+    "V08BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08BA"
+    },
+    "N07BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07BA"
+    },
+    "V03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AX"
+    },
+    "tieneFrecuenciaIndicada" : {
+      "@id" : "http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicada"
+    },
+    "A05AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05AB"
+    },
+    "J05AR" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AR"
+    },
+    "A10BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BG"
+    },
+    "A11BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11BA"
+    },
+    "J06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06AA"
+    },
+    "L01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01B"
+    },
+    "J07AH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AH"
+    },
+    "D04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D04AA"
+    },
+    "P01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01C"
+    },
+    "A12CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CC"
+    },
+    "C07B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07B"
+    },
+    "V09IB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09IB"
+    },
+    "A02BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02BC"
+    },
+    "V09H" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09H"
+    },
+    "C02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02C"
+    },
+    "S01FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01FA"
+    },
+    "A07E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07E"
+    },
+    "N01AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01AG"
+    },
+    "V06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06AA"
+    },
+    "J07AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AG"
+    },
+    "S01CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01CC"
+    },
+    "J01XB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XB"
+    },
+    "G02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02A"
+    },
+    "V04CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CD"
+    },
+    "N02BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02BA"
+    },
+    "A09AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A09AB"
+    },
+    "C05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05"
+    },
+    "N05A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05A"
+    },
+    "J07CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07CA"
+    },
+    "N07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07A"
+    },
+    "tieneColesterolTotal" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneColesterolTotal"
+    },
+    "V04CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CA"
+    },
+    "A07C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07C"
+    },
+    "R03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03BA"
+    },
+    "Escolaridad_Superior" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Superior"
+    },
+    "N" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N"
+    },
+    "L01AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AG"
+    },
+    "G01AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AF"
+    },
+    "M01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AA"
+    },
+    "C03EA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03EA"
+    },
+    "N05BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BD"
+    },
+    "A11DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11DB"
+    },
+    "D07CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07CB"
+    },
+    "G01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AC"
+    },
+    "G01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01BA"
+    },
+    "B01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01AD"
+    },
+    "M05BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05BB"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "V09IA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09IA"
+    },
+    "P01BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BE"
+    },
+    "G03XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03XA"
+    },
+    "V06DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DB"
+    },
+    "M02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02AC"
+    },
+    "L02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02AX"
+    },
+    "Via_Enteral" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Via_Enteral"
+    },
+    "A06AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AG"
+    },
+    "L01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AB"
+    },
+    "J01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01B"
+    },
+    "A02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02BB"
+    },
+    "A11AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11AB"
+    },
+    "L02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02AA"
+    },
+    "M01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01AC"
+    },
+    "A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A"
+    },
+    "D02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02BB"
+    },
+    "N05BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05BE"
+    },
+    "R07AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R07AA"
+    },
+    "tieneExploracionFisica" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneExploracionFisica"
+    },
+    "A06AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AD"
+    },
+    "J05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AA"
+    },
+    "V09D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09D"
+    },
+    "S01L" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01L"
+    },
+    "R07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R07A"
+    },
+    "C10AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10AB"
+    },
+    "D09A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D09A"
+    },
+    "A07D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07D"
+    },
+    "J06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06"
+    },
+    "tienePadecimientoActual" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tienePadecimientoActual"
+    },
+    "D02AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02AD"
+    },
+    "N04BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04BD"
+    },
+    "A16" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A16"
+    },
+    "V03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AB"
+    },
+    "S01E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01E"
+    },
+    "N07C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07C"
+    },
+    "N07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N07AB"
+    },
+    "A12CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12CE"
+    },
+    "Necrobiosis" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Necrobiosis"
+    },
+    "C02CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02CA"
+    },
+    "S01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01CA"
+    },
+    "tieneNotaMedica" : {
+      "@type" : "@id",
+      "@id" : "http://www.modelo.org/datos#tieneNotaMedica"
+    },
+    "A03D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03D"
+    },
+    "M02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M02AX"
+    },
+    "A02AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AF"
+    },
+    "D06A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D06A"
+    },
+    "B03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03AC"
+    },
+    "H03BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03BA"
+    },
+    "C08GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08GA"
+    },
+    "J05AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J05AG"
+    },
+    "A03F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03F"
+    },
+    "N02BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02BG"
+    },
+    "tieneIndicacionAdicional" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneIndicacionAdicional"
+    },
+    "J07AN" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AN"
+    },
+    "M03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03AC"
+    },
+    "tieneCantidadIndicadaEnReceta" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneCantidadIndicadaEnReceta"
+    },
+    "A06AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06AB"
+    },
+    "D05BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05BX"
+    },
+    "B03AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03AD"
+    },
+    "A02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02A"
+    },
+    "C02BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02BC"
+    },
+    "N02AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02AD"
+    },
+    "L02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02"
+    },
+    "C03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C03B"
+    },
+    "V07AN" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AN"
+    },
+    "Endocrinologia_Y_Metabolismo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Endocrinologia_Y_Metabolismo"
+    },
+    "B05X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05X"
+    },
+    "D03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03AA"
+    },
+    "G04BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04BE"
+    },
+    "C04AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AF"
+    },
+    "Insulina" : {
+      "@id" : "http://www.medida-control.com/tratamiento#Insulina"
+    },
+    "Escolaridad" : {
+      "@id" : "http://www.niveleseducativos-mexico.org/niveles#Escolaridad"
+    },
+    "G01AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01AD"
+    },
+    "A12BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A12BA"
+    },
+    "V09" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09"
+    },
+    "C02L" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02L"
+    },
+    "V04CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CC"
+    },
+    "Hepatitis" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Hepatitis"
+    },
+    "D03AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03AX"
+    },
+    "A03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AC"
+    },
+    "R07AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R07AB"
+    },
+    "N03AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AF"
+    },
+    "L01XB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XB"
+    },
+    "C10B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10B"
+    },
+    "tieneFechaNacimiento" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#date",
+      "@id" : "http://www.personas-mexico.org/persona#tieneFechaNacimiento"
+    },
+    "N04AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04AC"
+    },
+    "J01XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01XX"
+    },
+    "N01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N01"
+    },
+    "C09C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09C"
+    },
+    "M01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01BA"
+    },
+    "B05D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05D"
+    },
+    "Extravascular" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Extravascular"
+    },
+    "Gineco-obstetricia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Gineco-obstetricia"
+    },
+    "V01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V01A"
+    },
+    "ICD10" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.diabetes-mexico.org/red#ICD10"
+    },
+    "V07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07A"
+    },
+    "L01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01AA"
+    },
+    "R05DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05DB"
+    },
+    "H01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01"
+    },
+    "Biotipo" : {
+      "@id" : "http://www.modelo.org/datos#Biotipo"
+    },
+    "D04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D04"
+    },
+    "M03BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M03BC"
+    },
+    "tieneUreaSerica" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneUreaSerica"
+    },
+    "D07X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07X"
+    },
+    "C02LX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LX"
+    },
+    "A11A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11A"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "B06AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B06AA"
+    },
+    "D05" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05"
+    },
+    "G04BD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04BD"
+    },
+    "L03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L03A"
+    },
+    "A11G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11G"
+    },
+    "P01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01B"
+    },
+    "A07B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07B"
+    },
+    "Hematologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Hematologia"
+    },
+    "D02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D02"
+    },
+    "V04CE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CE"
+    },
+    "S02DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02DA"
+    },
+    "L01DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01DB"
+    },
+    "D08AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AD"
+    },
+    "N05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05B"
+    },
+    "Medicamento_De_Catalogo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Medicamento_De_Catalogo"
+    },
+    "S03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03A"
+    },
+    "A14AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A14AA"
+    },
+    "J07AJ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07AJ"
+    },
+    "H01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01BA"
+    },
+    "D11AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11AX"
+    },
+    "C02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02A"
+    },
+    "M05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05BA"
+    },
+    "B02B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02B"
+    },
+    "G03EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03EB"
+    },
+    "J06BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J06BA"
+    },
+    "C02KD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02KD"
+    },
+    "Discapacidad_Motora" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Motora"
+    },
+    "R05DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R05DA"
+    },
+    "B02BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02BB"
+    },
+    "A03FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03FA"
+    },
+    "provocaRiesgoDuranteElEmbarazo" : {
+      "@type" : "@id",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#provocaRiesgoDuranteElEmbarazo"
+    },
+    "R02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02A"
+    },
+    "M01BX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01BX"
+    },
+    "A11E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11E"
+    },
+    "L01CC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01CC"
+    },
+    "Discapacidad_Visual" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Visual"
+    },
+    "J01FG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01FG"
+    },
+    "J01DH" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01DH"
+    },
+    "A03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03"
+    },
+    "L01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01A"
+    },
+    "R03BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03BB"
+    },
+    "S03" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S03"
+    },
+    "V03AM" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AM"
+    },
+    "G03D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03D"
+    },
+    "Oftalmologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Oftalmologia"
+    },
+    "J02AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02AX"
+    },
+    "C08D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08D"
+    },
+    "tieneFrecuenciaRespiratoria" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneFrecuenciaRespiratoria"
+    },
+    "V09HA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09HA"
+    },
+    "S02A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02A"
+    },
+    "C07CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07CB"
+    },
+    "A11GA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11GA"
+    },
+    "J07BF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J07BF"
+    },
+    "N05CD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CD"
+    },
+    "C09X" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09X"
+    },
+    "N04BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04BC"
+    },
+    "C01BG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01BG"
+    },
+    "C01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01AX"
+    },
+    "N02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02C"
+    },
+    "V04CK" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CK"
+    },
+    "J02AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J02AC"
+    },
+    "M01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01CA"
+    },
+    "Enfermedades_Infecciosas_Y_Parasitarias" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Enfermedades_Infecciosas_Y_Parasitarias"
+    },
+    "B05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05B"
+    },
+    "H04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H04"
+    },
+    "COVID-19" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#COVID-19"
+    },
+    "V04CJ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V04CJ"
+    },
+    "L01XX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XX"
+    },
+    "V07AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AC"
+    },
+    "C05AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05AX"
+    },
+    "G04B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G04B"
+    },
+    "R03DB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03DB"
+    },
+    "tieneAlergias" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.modelo.org/datos#tieneAlergias"
+    },
+    "Nota_Medica" : {
+      "@id" : "http://www.modelo.org/datos#Nota_Medica"
+    },
+    "Intravascular" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Intravascular"
+    },
+    "A07AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07AC"
+    },
+    "H05BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H05BA"
+    },
+    "V08" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08"
+    },
+    "R03CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03CB"
+    },
+    "H03AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03AA"
+    },
+    "N05CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CB"
+    },
+    "J01GB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J01GB"
+    },
+    "G02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G02AB"
+    },
+    "Insuficiencia_Renal" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Insuficiencia_Renal"
+    },
+    "A11" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11"
+    },
+    "J04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#J04AB"
+    },
+    "Psiquiatria" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Psiquiatria"
+    },
+    "Soluciones_Electroliticas_Y_Sustitutos_Del_Plasma" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Soluciones_Electroliticas_Y_Sustitutos_Del_Plasma"
+    },
+    "A05AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A05AA"
+    },
+    "V03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03A"
+    },
+    "N06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06"
+    },
+    "B02" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B02"
+    },
+    "C02DD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02DD"
+    },
+    "H01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H01B"
+    },
+    "L01CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01CA"
+    },
+    "B05XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B05XA"
+    },
+    "C08EX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C08EX"
+    },
+    "L01DA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01DA"
+    },
+    "C10A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10A"
+    },
+    "tieneTMB" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneTMB"
+    },
+    "P01AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01AC"
+    },
+    "D08AG" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D08AG"
+    },
+    "P01CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01CB"
+    },
+    "N02BE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N02BE"
+    },
+    "C09XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C09XA"
+    },
+    "D05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D05B"
+    },
+    "D03A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D03A"
+    },
+    "Paciente" : {
+      "@id" : "http://www.personas-mexico.org/persona#Paciente"
+    },
+    "B01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01"
+    },
+    "B03B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B03B"
+    },
+    "L04AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04AX"
+    },
+    "D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D"
+    },
+    "G01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G01"
+    },
+    "C07FA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07FA"
+    },
+    "R02AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R02AA"
+    },
+    "D11AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D11AC"
+    },
+    "Localización_Geografica" : {
+      "@id" : "http://www.estados-mexico.org/estados#Localización_Geografica"
+    },
+    "V10B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V10B"
+    },
+    "Hiperuricemia" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Hiperuricemia"
+    },
+    "A11JB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11JB"
+    },
+    "C04AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04AD"
+    },
+    "M09AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M09AB"
+    },
+    "A07A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07A"
+    },
+    "A14" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A14"
+    },
+    "L02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L02AB"
+    },
+    "A07CA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07CA"
+    },
+    "C02LN" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LN"
+    },
+    "C07BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07BB"
+    },
+    "V08A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08A"
+    },
+    "B01A" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#B01A"
+    },
+    "S01B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01B"
+    },
+    "Discapacidad_Mental" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Mental"
+    },
+    "Planificacion_Familiar" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Planificacion_Familiar"
+    },
+    "C07E" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C07E"
+    },
+    "A07AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A07AX"
+    },
+    "C02LF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LF"
+    },
+    "V08C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08C"
+    },
+    "D01BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D01BA"
+    },
+    "C02LA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C02LA"
+    },
+    "L01XD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L01XD"
+    },
+    "N04AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N04AB"
+    },
+    "D07XA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#D07XA"
+    },
+    "C01EB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01EB"
+    },
+    "N03AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N03AC"
+    },
+    "G03G" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#G03G"
+    },
+    "tieneCantidadMinima" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneCantidadMinima"
+    },
+    "ovulo" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#ovulo"
+    },
+    "tieneMedidaDePrincipioActivo" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneMedidaDePrincipioActivo"
+    },
+    "V03AE" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AE"
+    },
+    "N05AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AC"
+    },
+    "H03C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H03C"
+    },
+    "P01BB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#P01BB"
+    },
+    "C04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C04"
+    },
+    "A03AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A03AB"
+    },
+    "N06CB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06CB"
+    },
+    "Dosis_Indicada_Para_Ninos" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Dosis_Indicada_Para_Ninos"
+    },
+    "V07AZ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V07AZ"
+    },
+    "Dermatologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Dermatologia"
+    },
+    "S02C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S02C"
+    },
+    "C01BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C01BC"
+    },
+    "N05AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AB"
+    },
+    "N05AL" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AL"
+    },
+    "V08B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V08B"
+    },
+    "N06BA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06BA"
+    },
+    "L04" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#L04"
+    },
+    "S01AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01AB"
+    },
+    "A10AC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10AC"
+    },
+    "S01F" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01F"
+    },
+    "M05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M05B"
+    },
+    "N05AF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05AF"
+    },
+    "tieneLDL" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@id" : "http://www.modelo.org/datos#tieneLDL"
+    },
+    "V09FX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V09FX"
+    },
+    "V06DX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V06DX"
+    },
+    "tieneDiscapacidad" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#tieneDiscapacidad"
+    },
+    "M01C" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#M01C"
+    },
+    "tieneICC" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneICC"
+    },
+    "A11ED" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A11ED"
+    },
+    "C10AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10AA"
+    },
+    "S01AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01AX"
+    },
+    "Expediente_Clinico" : {
+      "@id" : "http://www.modelo.org/datos#Expediente_Clinico"
+    },
+    "S01AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#S01AA"
+    },
+    "V01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V01"
+    },
+    "A01" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A01"
+    },
+    "A10BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A10BC"
+    },
+    "Clasificacion_ATC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Clasificacion_ATC"
+    },
+    "Otorrinolaringologia" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#Otorrinolaringologia"
+    },
+    "A06" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A06"
+    },
+    "tieneHistoriaClinica" : {
+      "@type" : "@id",
+      "@id" : "http://www.modelo.org/datos#tieneHistoriaClinica"
+    },
+    "V03AN" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AN"
+    },
+    "tieneTemperaturaCorporal" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#float",
+      "@id" : "http://www.modelo.org/datos#tieneTemperaturaCorporal"
+    },
+    "C10AX" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C10AX"
+    },
+    "N05CF" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N05CF"
+    },
+    "V03AZ" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#V03AZ"
+    },
+    "H04AA" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#H04AA"
+    },
+    "A02AB" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A02AB"
+    },
+    "A04AD" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#A04AD"
+    },
+    "C05B" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#C05B"
+    },
+    "tieneDescripcion" : {
+      "@type" : "http://www.w3.org/2001/XMLSchema#string",
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#tieneDescripcion"
+    },
+    "R03D" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#R03D"
+    },
+    "N06BC" : {
+      "@id" : "http://www.owl-ontologies.com/medicamentos.owl#N06BC"
+    },
+    "Discapacidad" : {
+      "@id" : "http://www.padecimientos-mexico.org/enfermedad#Discapacidad"
+    },
+    "resideEn" : {
+      "@type" : "@id",
+      "@id" : "http://www.diabetes-mexico.org/red#resideEn"
+    }
+  }
+}

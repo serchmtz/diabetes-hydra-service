@@ -1,0 +1,1156 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.modelo.org/datos"
+     xml:base="http://www.modelo.org/datos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:datos="http://www.modelo.org/datos#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.modelo.org/datos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneBiotipo -->
+
+    <owl:ObjectProperty rdf:about="http://www.modelo.org/datos#tieneBiotipo">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneHistoriaClinica -->
+
+    <owl:ObjectProperty rdf:about="http://www.modelo.org/datos#tieneHistoriaClinica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <rdfs:range rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneNotaMedica -->
+
+    <owl:ObjectProperty rdf:about="http://www.modelo.org/datos#tieneNotaMedica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <rdfs:range rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAlergias -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAlergias">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAnalisis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAnalisis">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAntecedentesGinecoObstetricos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAntecedentesGinecoObstetricos">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAntecedentesHeredoFamiliares -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAntecedentesHeredoFamiliares">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAntecedentesPersonalesNoPatologicos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAntecedentesPersonalesNoPatologicos">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneAntecedentesPersonalesPatologicos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneAntecedentesPersonalesPatologicos">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneColesterolTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneColesterolTotal">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneCreatininaSerica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneCreatininaSerica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneEdad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneEdad">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneExploracionFisica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneExploracionFisica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneFecha -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneFecha">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneFrecuenciaCardiaca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneFrecuenciaCardiaca">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneFrecuenciaRespiratoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneFrecuenciaRespiratoria">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneGlucosaPostPrandial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneGlucosaPostPrandial">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneGlucosaPrePrandial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneGlucosaPrePrandial">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneHDL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneHDL">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneHbA1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneHbA1">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneICC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneICC">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:comment>Índice Cadera-Cintura</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneIMC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneIMC">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneLDL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneLDL">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneMedidaCadera -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneMedidaCadera">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneMedidaCintura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneMedidaCintura">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tienePadecimientoActual -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tienePadecimientoActual">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tienePeso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tienePeso">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tienePresionArterialDistolica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tienePresionArterialDistolica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tienePresionArterialSistolica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tienePresionArterialSistolica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tienePronostico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tienePronostico">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneTMB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneTMB">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Tasa metabólica basal (TMB) como la cantidad mínima de energía que una persona necesita, en estado de reposo, para llevar a cabo aquellas funciones vitales necesarias para el correcto funcionamiento del organismo</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneTalla -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneTalla">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneTemperaturaCorporal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneTemperaturaCorporal">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneTrigliceridos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneTrigliceridos">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneUreaSerica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.modelo.org/datos#tieneUreaSerica">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.modelo.org/datos#Biotipo -->
+
+    <owl:Class rdf:about="http://www.modelo.org/datos#Biotipo"/>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente_Clinico -->
+
+    <owl:Class rdf:about="http://www.modelo.org/datos#Expediente_Clinico">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneNotaMedica"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneHistoriaClinica"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>El expediente clínico es un instrumento de gran relevancia para la materialización del derecho a la protección de la salud. Se trata del conjunto único de información y datos personales de un paciente, que puede estar integrado por documentos escritos, gráficos, imagenológicos, electrónicos, magnéticos, electromagnéticos, ópticos, magneto-ópticos y de otras tecnologías, mediante los cuales se hace constar en diferentes momentos del proceso de la atención médica, las diversas intervenciones del personal del área de la salud, así como describir el estado de salud del paciente; además de incluir en su caso, datos acerca del bienestar físico, mental y social del mismo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.modelo.org/datos#Historia_Clinica -->
+
+    <owl:Class rdf:about="http://www.modelo.org/datos#Historia_Clinica"/>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota_Medica -->
+
+    <owl:Class rdf:about="http://www.modelo.org/datos#Nota_Medica"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.modelo.org/datos#DelgadezLeve -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#DelgadezLeve">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#DelgadezModerada -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#DelgadezModerada">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#DelgadezSevera -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#DelgadezSevera">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente1">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneHistoriaClinica rdf:resource="http://www.modelo.org/datos#Historia1"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota1"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota10"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota2"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota3"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota4"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota5"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota6"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota7"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota8"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente2">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneHistoriaClinica rdf:resource="http://www.modelo.org/datos#Historia2"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota11"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota12"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota13"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota14"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota15"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente3">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneHistoriaClinica rdf:resource="http://www.modelo.org/datos#Historia3"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota17"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota18"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente4">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota20"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota21"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota22"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente5">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Expediente6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Expediente6">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota24"/>
+        <datos:tieneNotaMedica rdf:resource="http://www.modelo.org/datos#Nota25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Historia1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Historia1">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <datos:tieneAlergias rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penicilinas</datos:tieneAlergias>
+        <datos:tieneAntecedentesHeredoFamiliares rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madre finada a los 36 años por patologia cardiaca
+Padre finado a los 55 años por complicaciones de IRC
+Refiere 4 hijos aparentemente sanos</datos:tieneAntecedentesHeredoFamiliares>
+        <datos:tieneAntecedentesPersonalesNoPatologicos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tabaquismo activo desde 2008 a razón de 6 cigarros al día
+Etilismo ocasional sin llegar a la embriaguez</datos:tieneAntecedentesPersonalesNoPatologicos>
+        <datos:tieneAntecedentesPersonalesPatologicos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quirurgicos:
+Salpingoclasia en 1986, Hernioplastia inguinal
+Crónicos:
+Diabetes Mellitus DX en 2014 en TX CON INSULINA GLARGINA 10 UI AL DIAS
+HAS DE 2 AÑOS DE DX EN TX CON TELMISARTAN 80 MG CADA 12 HRS AMLODIPINO 5 MG AL DIA
+ENFERMEDAD RENAL CRONICA DX EN DICIEMBRE DEL 2015 EN TX CON FUROSEMIDA 20 MG AL DIA.
+CARDIOPATIA REUMATICA INACTIVA, 
+INSUFICIENCIA CARDIACA NHA II DE DX en 2014</datos:tieneAntecedentesPersonalesPatologicos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Historia2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Historia2">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <datos:tieneAntecedentesGinecoObstetricos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MENARCA 10 AÑOS
+MENOPAUSIA 40 AÑOS
+IVSA 25 AÑOS 
+PS1
+Gestas 5
+Partos 3
+Cesaria 2
+Aborto 0</datos:tieneAntecedentesGinecoObstetricos>
+        <datos:tieneAntecedentesHeredoFamiliares rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PADRE FINADO POR INFARTO AGUDO AL MIOCARDIO Y DM2</datos:tieneAntecedentesHeredoFamiliares>
+        <datos:tieneAntecedentesPersonalesPatologicos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM2 DE 45 AÑOS DE DX EN TX CON INSULINA DEGLUDEC 16 UI
+HAS DE 30 AÑOS DE DX EN TX CON VALSARTAN/AMLODIPINO/HIDROCLOROTIAZIDA 10/160/25 MG CADA 24 HRS</datos:tieneAntecedentesPersonalesPatologicos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Historia3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Historia3">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <datos:tieneAntecedentesGinecoObstetricos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menarca a los 13 años
+Gestas: 6
+Partos: 6
+Abortos: 0
+Cesareas: 0</datos:tieneAntecedentesGinecoObstetricos>
+        <datos:tieneAntecedentesHeredoFamiliares rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PADRE FINADO POR CARDIOPATIA
+1 HERMANO FINADO POR CARDIOPATIA
+HERMANOS HAS</datos:tieneAntecedentesHeredoFamiliares>
+        <datos:tieneAntecedentesPersonalesNoPatologicos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZOONOSIS
+EXPOSICION A HUMO DE LEÑA EN LA INFANCIA HASTA HACE 20 AÑOS
+ALCOHOLISMO OCASIONAL</datos:tieneAntecedentesPersonalesNoPatologicos>
+        <datos:tieneAntecedentesPersonalesPatologicos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HAS DESDE LOS 13 AÑOS DE EDAD EN TX CON LOSARTAN, ISOSORBIDA, DIGOXINA, ASPIRINA
+DM2 DE 14 AÑOS DE DX EN TX REGULAR
+COLECISTECTOMIA HACE 5 AÑOS
+APENDICITIS HACE 28 AÑOS</datos:tieneAntecedentesPersonalesPatologicos>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota1">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neumopatia del obseo
+Obesidad no específica</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-28T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">86.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.49</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota10">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONSCIENTE, ORIENTADA, COOPERADORA, FACIES DE DOLOR, NORMOCEFALEA, PUPILAS IGUALES CON BUEN REFLEJO A LA LUZ, NARINAS NORMALES, OROFARINGE BIEN HIDRATADA, CUELLO CILINDRICO, NO ADENOMEGALIAS, AREA CARDIACA RITMICA, NO RUIDOS AGREGADOS, CAMPOS PULMONARES CON BUENA VENTILACION, ABDOMEN GLOBOSO POR OBESIDAD GRADO 3, BLANDO, DEPRESIBLE DOLOROSO A LA PALPACION PROFUNDA, NO HAY SIGNO DE REBOTE, PERISTALSIS ACTIVA Y NORMAL. EL DOLOR ES EN AMBOS FLANCOS, EXTREMIDADES INTEGRAS
+SINDROME DEL COLON IRRITABLE SIN DIARREA</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DESDE AYER INICIA NUEVAMENTE EL DOLOR ABDOMINAL EN EPIGASTRO QUE LE IRRADIA HACIA FLANCO DERECHO</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-20T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFIERE DOLOR ABDOMINAL DE 4 DIAS DE EVOLUCION, ESTUVO EN URGENCIAS Y NO LE ENCONTRARON, COLELITIASIS POR LO QUE FUE DADA DE ALTA</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">79.5</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Favorable</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.48</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota11">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM insulinodependiente</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182</datos:tieneColesterolTotal>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-29T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</datos:tieneGlucosaPrePrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DESCONTROL GLUCEMICO</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.3</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.45</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota12">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">167</datos:tieneColesterolTotal>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PACIENTE SENIL SIN DOLOR LUNMBR O URETRAL</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-23T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</datos:tieneGlucosaPrePrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRESENTA FRECUENTEMENTE INFECCION DE VIAS URINARIAS SIN MOLESTIAS APARENTES</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligado a evolucion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.52</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota13">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-25T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFIERE HIPOREXIA Y SE SIGUE QUEJANDO DE DOLOR A PESAR DE ESTAR EN TX CON BUPRENORFINA Y GABAPENTINA</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">42.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.43</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.5</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota14">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM insulinodependiente</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-29T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</datos:tieneGlucosaPrePrandial>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.47</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota15">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DETERIORO COGNITIVO</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">188</datos:tieneColesterolTotal>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-11T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPostPrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">286</datos:tieneGlucosaPostPrandial>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">44.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.46</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.3</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota16">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</datos:tieneColesterolTotal>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-29T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</datos:tieneGlucosaPrePrandial>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.55</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.8</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota17">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+ENFERMEDAD SEVERA DE 3 VASOS, NO TRIBUTARIA A REVASCULARIZACION PERCUTNEA
+ANGOR ESTABLE
+HIPERTENSION ESENCIAL PRIMARIA</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</datos:tieneColesterolTotal>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">133</datos:tieneGlucosaPrePrandial>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligado a evolucion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.53</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.1</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota18">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+ENFERMEDAD SEVERA DE 3 VASOS, NO TRIBUTARIA A REVASCULARIZACION PERCUTNEA
+ANGOR ESTABLE
+HIPERTENSION ESENCIAL PRIMARIA
+OTROS HIPOTIROIDISMOS
+OTRAS HIPERTENSIONES PULMMONARES SECUNDARIAS
+HIPERURICEMIA SIN SIGNOS DE ARTRITIS INFLAMATORIA Y ENFERMEDAD TOFACEA</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">126</datos:tieneColesterolTotal>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-17T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">146</datos:tieneGlucosaPrePrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CITA DE CONTROL</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligado a evolucion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.53</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota19">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+HIPERTENSION ESENCIAL PRIMARIA
+INFARTO ANTIGUO DEL MIOCARDIO
+HISTORIA PERSONAL DE INCUMPLIMIENTO DEL REGIMEN O TRATAMIENTO MEDICO
+PROBLEMAS RELACIONADOS CON LA DIETA Y HABITOS ALIMENTARIOS INAPROPIADOS
+HIPOTIROIDISMO SUBCLINICO POR DEFICIENCIA DE YODO</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">179</datos:tieneColesterolTotal>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM DX EN 1990
+HAS DX EN 1970</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-15T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">474</datos:tieneGlucosaPrePrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PESO EN JUNIO 2017 76.5KG, DICIEMBRE 2017 75.7KG, AGOSTO 2018 78KG</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.54</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota2">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+HIPOTIROIDISMO SUBCLINICO POR DEFICIENCIA DE YODO</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-05T00:00:00Z</datos:tieneFecha>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota20">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la séptima década de la vida, quien la acude para valoración de enfermedad crónica degenerativa, cifras tensiónales normales para su padecimiento, glicemia capilar normal, BH normal, con dislipidemia secundaria a hipertrigliceridemia, se continua tratamiento, se informa sobre importancia de apego a tratamiento, Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento con base en la Norma Oficial Mexicana. NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes página 19 y 20. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37.</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente de sexo Femenino, consiente, bien orientada en las tres esferas neurológicas, edad aparente igual a la cronológica, buena coloración tegumentaria, estado hídrico conservado, facie normal, posición y actitud libremente escogida. Cabeza: Normocéfalo, pupilas isocoricas normoreflecticas, Nariz sin alteraciones, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, sin adenopatías. Tórax: movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: globoso por panículo adiposo, blando, depresible, peristalsis presente, normal, sin tumoraciones(megalias), sin puntos dolorosos y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo.  Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, con marcha normal, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-21T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneMedidaCintura rdf:datatype="http://www.w3.org/2001/XMLSchema#float">84.0</datos:tieneMedidaCintura>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente sexo femenino de 64 años, el cual acude a control de enfermedad crónico degenerativa, de larga evolución en Tratamiento en esta unidad, niega nicturia, poliuria, polifagia, pérdida de peso, polidipsia, pérdida de la agudeza visual o auditiva, no refiere disminución de la sensibilidad de extremidades, Niega sintomatología urinaria. Niega datos de infección de transmisión sexual y prácticas de riesgo.  Niega alérgicos. Niega datos de vasoespasmo: acufenos, fosfenos, cefalea.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">46.5</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.41</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota21">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la séptima década de la vida, la cual acude para valoración de enfermedad crónica degenerativa, cifras tensiónales normales, glicemia capilar no valorada por falta de material. Se le realiza detección de pérdida de la sensibilidad por medio de la técnica de Semmes Weinstein, encontrándose sensibilidad normal. 
+Se informa sobre importancia de apego a tratamiento, Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento con base en la Norma Oficial Mexicana. NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes página 19 y 20. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Femenino, consiente, bien orientada en las tres esferas neurológicas, edad aparente igual a la cronológica, buena coloración tegumentaria, estado hídrico conservado, facie normal, posición y actitud libremente escogida. Cabeza: Normocéfalo, pupilas isocoricas normoreflecticas, Nariz sin alteraciones, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, sin adenopatías. Tórax: movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: blando, depresible, peristalsis presente, normal, sin megalias, sin puntos dolorosos y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo.  Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, con marcha normal, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema, sensibilidad normal.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-15T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente sexo femenino de 64 años, el cual acude a control de enfermedad crónico degenerativa, de larga evolución en Tratamiento en esta unidad, niega nicturia, poliuria, polifagia, pérdida de peso, polidipsia, pérdida de la agudeza visual o auditiva, no refiere disminución de la sensibilidad de extremidades, Niega sintomatología urinaria. Niega datos de vasoespasmo: acufenos, fosfenos, cefalea. Refiere parestesias desde hace una semana en miembros pélvicos, niega edema.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo.</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.41</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota22">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la séptima década de la vida, la cual acude para valoración de enfermedad crónica degenerativa, cifras tensiónales normales, glicemia capilar no valorada por falta de material. Se informa sobre importancia de apego a tratamiento. Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento con base en la Norma Oficial Mexicana. NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes página 19 y 20. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37.</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alerta,  bien orientada en las tres esferas neurológicas, edad aparente igual a la cronológica, buena coloración tegumentaria, estado hídrico conservado, facie normal, posición y actitud libremente escogida. Cabeza: Normocéfalo, pupilas isocoricas normoreflecticas, Nariz sin alteraciones, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, sin adenopatías. Tórax: movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: blando, depresible, peristalsis presente, normal, sin megalias, doloroso a la palpación profunda en epigastrio sin irradiarse y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo.  Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, con marcha normal, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema, sensibilidad normal.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-15T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente sexo femenino de 65 años, que acude a control de enfermedad crónico degenerativa, de larga evolución en tratamiento en esta unidad, niega nicturia, poliuria, polifagia, pérdida de peso, polidipsia, pérdida de la agudeza visual o auditiva, no refiere disminución de la sensibilidad de extremidades, Niega sintomatología urinaria. Niega datos de vasoespasmo: acufenos, fosfenos, cefalea. Refiere dolor en epigastrio tipo urente el cual se exacerba con la ingesta de irritantes.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo.</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.41</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota23">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la sexta década de la vida, quien la acude para valoración de enfermedad crónica degenerativa, cifras tensiónales normales, glucosa capilar pospandrial elevada, se informa sobre mejora en apego a tratamiento, paciente solicita USG renal, se solicitan laboratorios de control, se orienta sobre importancia de tomar el tratamiento como es indicado para mejorar su control. Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento establecido con base en la Norma Oficial Mexicana. NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes página 19 y 20. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37.</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente de sexo Femenino, consiente, bien orientada en las tres esferas neurológicas, edad aparente igual a la cronológica, buena coloración tegumentaria, estado hídrico conservado, facie normal, posición y actitud libremente escogida. Cabeza: Normocéfalo, pupilas isocoricas normoreflecticas, Nariz sin alteraciones, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, glándula tiroides normal, sin adenopatías. Tórax: normolineo, movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: globoso por panículo adiposo, blando, depresible, peristalsis presente, normal, sin tumoraciones (megalias), sin puntos dolorosos y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo.  Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, con marcha normal, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-29T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente sexo femenino de 57 años, el cual acude a control subsecuente de enfermedad crónico degenerativa, en Tratamiento en esta unidad, Actualmente niega poliuria, polidipsia, polifagia, datos de vasoespasmo, de bajo gasto, sintomatología urinaria.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">77.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo.</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.47</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota24">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la octava década de la vida con los padecimientos ya comentados, quien acude regularmente a sus consultas de control, al momento con cifras tensionales dentro de parámetros normales, glicemia capilar elevada. Se informa ampliamente sobre los riesgos y complicaciones de no tener un apego estricto al tratamiento, se orienta sobre modificación de hábitos higiénico-dietéticos, se continúa terapéutico empleada. Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento establecido con base en la Norma Oficial Mexicana NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes, en 19 y 20 de la norma. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37.</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alerta, orientada, adecuada coloración de tegumentos, estado hídrico conservado, Cabeza: Normocéfalo, ojos simétricos, pupilas isocoricas normoreflecticas, adoncia, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, sin adenopatías. Tórax: movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: globoso por panículo adiposo, blando, depresible, peristalsis presente, normal, sin tumoraciones, sin puntos dolorosos y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo. Tacto rectal con impactación coprostatica. Extremidades hipotroficas. Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-17T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Femenina de 75 años, quien es traída a consulta por su hija, para control de padecimientos crónico degenerativos, Hipertensión Arterial Sistema controlada, Diabetes Mellitus tipo 2 y Enfermedad de Parkinson en Tratamiento. Niega cefalea, acufenos o fosfenos, niega poliuria, polidipsia o polifagia.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo.</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.43</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota25">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paciente femenino en la octava década de la vida con los padecimientos ya comentados, quien acude regularmente a sus consultas de control, al momento con cifras tensionales dentro de parámetros normales, glicemia capilar elevada. Se informa ampliamente sobre los riesgos y complicaciones de no tener un apego estricto al tratamiento, se orienta sobre modificación de hábitos higiénico-dietéticos, se continúa terapéutico empleada. Manejo del paciente con base en las Guías de Práctica Clínica y en  las Acciones del Paquete Garantizado de servicios de promoción y prevención para una mejor Salud. Tratamiento establecido con base en la Norma Oficial Mexicana NOM-015-SSA2-1994, Para la prevención, tratamiento y control de la diabetes, en 19 y 20 de la norma. Tratamiento antihipertensivo de la Paciente establecido con base Guía de Diagnóstico y Tratamiento de la Hipertensión Arterial sistémica en el primer nivel de atención en la Página 19 y 37.</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alerta, orientada, adecuada coloración de tegumentos, estado hídrico conservado, Cabeza: Normocéfalo, ojos simétricos, pupilas isocoricas normoreflecticas, adoncia, mucosa oral bien hidratada, oídos simétricos permeables. Cuello: cilíndrico, tráquea central, sin adenopatías. Tórax: movimientos de amplexion y amplexación normales, frecuencia respiratoria normal, sin ruidos agregados, bien ventilados, frecuencia cardiaca rítmica, de buena intensidad y frecuencia, sin ruidos agregados. Abdomen: globoso por panículo adiposo, blando, depresible, peristalsis presente, normal, sin tumoraciones, sin puntos dolorosos y con sensibilidad normal, sin datos o signos de irritación peritoneal, Giordano negativo. Tacto rectal con impactación coprostatica. Extremidades hipotroficas. Extremidades: superiores simétricas movimientos normales, pulsos normales, reflejos osteotendinosos normales, Extremidades inferiores simétricas sin alteraciones en los movimientos, pulsos normales y presentes, reflejos normales,  buen llenado capilar, sin edema.</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-16T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Femenina de 75 años, quien es traída a consulta por su hija, para control de padecimientos crónico degenerativos, Hipertensión Arterial Sistema controlada, Diabetes Mellitus tipo 2 y Enfermedad de Parkinson en Tratamiento. Niega cefalea, acufenos o fosfenos, niega poliuria, polidipsia o polifagia.</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado a evolución de Padecimiento crónico Degenerativo.</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.43</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota3">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MALFORMACION CONGENITA DEL TABIQUE NO ESPECIFICADA</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-22T00:00:00Z</datos:tieneFecha>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malo para la vida y la funcion</datos:tienePronostico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota4">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INSUFICIENCIA CARDIACA NO ESPECIFICADA</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-22T00:00:00Z</datos:tieneFecha>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota5">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+HIPOTIROIDISMO SUBCLINICO POR DEFICIENCIA DE YODO
+HIPERTENSION ESENCIAL PRIMARIA
+DEFECTO DEL TABIQUE VENTRICULAR
+ANTICUAGULADA (ACENOCUMAROL)</datos:tieneAnalisis>
+        <datos:tieneColesterolTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</datos:tieneColesterolTotal>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EF OBESIDAD, CIANOSIS DISTAL Y PERIFERICA, FMS INTEGRAS, CARDIOPULMONAR ESTABLE</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-26T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPrePrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</datos:tieneGlucosaPrePrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFIERE DISNEA A PEQUEÑOS Y MEDIANOS ESFUERZOS, YA CON O2 DOMICILIARIO SUPLEMENTARIO NOCTURNO</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">83.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malo para la vida y la funcion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.47</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota6">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INSUFICIENCIA CARDIACA NYHA II
+CARDIOPATIA CONGENITA 
+INSUFICIENCIA RENAL CRONICA
+DM2
+HAS
+BLOQUEO COMPLETO DE RAMA DERECHA DEL HAZ DE HIS
+MALFORMACION CONGENITA DEL TABIQUE CARDIACO
+INSUFICIENCIA CARDIACA CONGESTIVA
+OTRAS HIPERTENSION</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENDROMORFICA, MARCHA LIGERAMENTE LENTA, CONSIENTE, HIDRATADA, CIANOSIS CENTRAL LEVE, CUELLO CON TEJIDO GRASO, NO SE APRECIA PY, NO SOPLOS, CAMPOS PULMONARES CON DISMINUCION DE LOS MOVIMIENTOS, PRECORDIO CON APEX EN 5TO EIC Y 2 CM DE LMCCON RSCS RITMICOS, CON 2P INTENSI, PRESENCIA DE UN SOPLO SITOLICO I/IV EN MESOCARDIO, MENORALES DIFERIDOS, EXTREMIDADES CON EDEMA, LIPODERMODISTROFIA EN ESTREMIDADES</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-25T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFIERE NO ESTAR TAN BIEN, INICIO DETERIOROR DE LA CLASE FUNCIONAL Y DISNEA, SE INICIO YA MANEJO CON O2 SUPLEMENTARIO POR ALGUNAS HORAS Y HA MEJORADO SU CLASE FUNCIONAL, LEVE EDEMA DE MI CON REPOSO PROLONGADO</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">83.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malo para la vida y la funcion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.48</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota7">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LESION EN CARA ANTERIOR MPI IZQUIERDO DE 3X3 RESTO DE LA EF SDP- QUISTE EPIDERMICO</datos:tieneAnalisis>
+        <datos:tieneExploracionFisica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFIERE QUE INICIA HACE UNA SEMANAN AL NOTAR LA PRESENCIA DE UN ABULTAMIENTO EN MPI IZQUIERDO EL CUAL LE PROVOCA DOLOR PARA LO CUAL ACUDE A CONSULTA</datos:tieneExploracionFisica>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-08T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</datos:tieneFrecuenciaRespiratoria>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LESION PIERNA DERECHA</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">81.5</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligado a evolucion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.52</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">37.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota8">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RETINOPATIAS DEL FONDO Y CAMBIOS VASCULARES RETINIANOS</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-11T00:00:00Z</datos:tieneFecha>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reservado</datos:tienePronostico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Nota9">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <datos:tieneAnalisis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DM NO INSULINODEPENDIENTE
+HIPERTENSION ESENCIAL PRIMARIA
+HIPOTIROIDISMO, NO ESPECIFICADO
+DEFECTO DEL TABIQUE VENTRICULAR</datos:tieneAnalisis>
+        <datos:tieneFecha rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-24T00:00:00Z</datos:tieneFecha>
+        <datos:tieneFrecuenciaCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</datos:tieneFrecuenciaCardiaca>
+        <datos:tieneFrecuenciaRespiratoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</datos:tieneFrecuenciaRespiratoria>
+        <datos:tieneGlucosaPostPrandial rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</datos:tieneGlucosaPostPrandial>
+        <datos:tienePadecimientoActual rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PESO EN FEBRERO 2017: 66 KG Enero 2018 79.2 kg mayo 2018 80</datos:tienePadecimientoActual>
+        <datos:tienePeso rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80.0</datos:tienePeso>
+        <datos:tienePresionArterialDistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</datos:tienePresionArterialDistolica>
+        <datos:tienePresionArterialSistolica rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</datos:tienePresionArterialSistolica>
+        <datos:tienePronostico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malo para la vida y la funcion</datos:tienePronostico>
+        <datos:tieneTalla rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.49</datos:tieneTalla>
+        <datos:tieneTemperaturaCorporal rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</datos:tieneTemperaturaCorporal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#ObesidadGrado1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#ObesidadGrado1">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#ObesidadGrado2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#ObesidadGrado2">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#ObesidadGrado3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#ObesidadGrado3">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#PesoNormal -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#PesoNormal">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.modelo.org/datos#Sobrepeso -->
+
+    <owl:NamedIndividual rdf:about="http://www.modelo.org/datos#Sobrepeso">
+        <rdf:type rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

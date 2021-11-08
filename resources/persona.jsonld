@@ -1,0 +1,146 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "Femenino"
+    }, {
+      "@value" : "Masculino"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#Medico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#Paciente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#Persona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1961-06-12T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1929-05-25T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1946-09-18T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1952-03-14T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "@value" : "1959-11-28T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#paciente6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.personas-mexico.org/persona#Paciente" ],
+  "http://www.personas-mexico.org/persona#tieneFechaNacimiento" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1941-10-16T00:00:00Z"
+  } ],
+  "http://www.personas-mexico.org/persona#tieneSexo" : [ {
+    "@value" : "Femenino"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tieneCedulaProfesional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Medico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tieneFechaNacimiento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Paciente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tieneNombre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tienePrimerApellido",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tieneSegundoApellido",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.personas-mexico.org/persona#tieneSexo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.personas-mexico.org/persona#Persona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+} ]

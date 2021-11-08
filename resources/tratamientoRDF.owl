@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.medida-control.com/tratamiento"
+     xml:base="http://www.medida-control.com/tratamiento"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.medida-control.com/tratamiento"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Dieta -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Dieta">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Medida_Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Ejercicio -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Ejercicio">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Medida_Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Insulina -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Insulina">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Medida_Control -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Medida_Control"/>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Otros_Farmacos -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Otros_Farmacos">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico -->
+
+    <owl:Class rdf:about="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico">
+        <rdfs:subClassOf rdf:resource="http://www.medida-control.com/tratamiento#Medida_Control"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Bezafibrato -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Bezafibrato">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Captopril -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Captopril">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#ComplejoB -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#ComplejoB">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#FumaratoFerroso -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#FumaratoFerroso">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Furosemida -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Furosemida">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Glibenclamida -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Glibenclamida">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#HidroxidoDeAluminioYMagnesio -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#HidroxidoDeAluminioYMagnesio">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Ibuprofeno -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Ibuprofeno">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaAspart -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaAspart">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaDetemir -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaDetemir">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaGlargina -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaGlargina">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaGlusina -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaGlusina">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaLispro -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaLispro">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaRegular -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaRegular">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Levodopa-Cardiodopa -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Levodopa-Cardiodopa">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Metformina -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Metformina">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Metformina-Glibenclamida -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Metformina-Glibenclamida">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Hipoglucemiante_Oral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Nifedipino -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Nifedipino">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#PolovitaminasYMinerales -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#PolovitaminasYMinerales">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Propanolol -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Propanolol">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Ranitidina -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Ranitidina">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Otros_Farmacos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaHumana(NPH) -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#InsulinaHumana(NPH)">
+        <rdf:type rdf:resource="http://www.medida-control.com/tratamiento#Insulina"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

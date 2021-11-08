@@ -1,0 +1,17 @@
+PREFIX : <http://www.diabetes-mexico.org/red>
+PREFIX datos: <http://www.modelo.org/datos#>
+PREFIX enfermedad: <http://www.padecimientos-mexico.org/enfermedad#>
+PREFIX estados: <http://www.estados-mexico.org/estados#>
+PREFIX medicamentos: <http://www.owl-ontologies.com/medicamentos.owl#>
+PREFIX niveles: <http://www.niveleseducativos-mexico.org/niveles#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX persona: <http://www.personas-mexico.org/persona#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX red: <http://www.diabetes-mexico.org/red#>
+PREFIX stardog: <tag:stardog:api:>
+PREFIX swrl: <http://www.w3.org/2003/11/swrl#>
+PREFIX swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>
+PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#>
+PREFIX tratamiento: <http://www.medida-control.com/tratamiento#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.niveleseducativos-mexico.org/niveles"
+     xml:base="http://www.niveleseducativos-mexico.org/niveles"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.niveleseducativos-mexico.org/niveles"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Escolaridad -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica">
+        <rdfs:subClassOf rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Media_Superior -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Media_Superior">
+        <rdfs:subClassOf rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Superior -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Superior">
+        <rdfs:subClassOf rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#OtraEscolaridad -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#OtraEscolaridad">
+        <rdfs:subClassOf rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Posgrado -->
+
+    <owl:Class rdf:about="http://www.niveleseducativos-mexico.org/niveles#Posgrado">
+        <rdfs:subClassOf rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Bachillerato -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#Bachillerato">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Media_Superior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#BachilleratoTrunco -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#BachilleratoTrunco">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Media_Superior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Doctorado -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#Doctorado">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Posgrado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Especialidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#Especialidad">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Posgrado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Licenciatura -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#Licenciatura">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Superior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#LicenciaturaTrunca -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#LicenciaturaTrunca">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Superior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Maestria -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#Maestria">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Posgrado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#PrimariaCompleta -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#PrimariaCompleta">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#PrimariaIncompleta -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#PrimariaIncompleta">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#SeIgnoraEscolaridad -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#SeIgnoraEscolaridad">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#OtraEscolaridad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#SecundariaCompleta -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#SecundariaCompleta">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#SecundariaIncompleta -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#SecundariaIncompleta">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad_Basica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#SinEscolaridad -->
+
+    <owl:NamedIndividual rdf:about="http://www.niveleseducativos-mexico.org/niveles#SinEscolaridad">
+        <rdf:type rdf:resource="http://www.niveleseducativos-mexico.org/niveles#OtraEscolaridad"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

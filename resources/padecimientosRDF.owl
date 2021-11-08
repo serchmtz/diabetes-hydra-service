@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.padecimientos-mexico.org/enfermedad"
+     xml:base="http://www.padecimientos-mexico.org/enfermedad"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:enfermedad="http://www.padecimientos-mexico.org/enfermedad#">
+    <owl:Ontology rdf:about="http://www.padecimientos-mexico.org/enfermedad"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#esSintomaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.padecimientos-mexico.org/enfermedad#esSintomaDe">
+        <rdfs:domain rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+        <rdfs:range rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#puedeCausar -->
+
+    <owl:ObjectProperty rdf:about="http://www.padecimientos-mexico.org/enfermedad#puedeCausar">
+        <rdfs:domain rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+        <rdfs:range rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#COVID-19 -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#COVID-19">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Cancer -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Cancer">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Cardiopatia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Cardiopatia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Cardiopatia_Isquemica -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Cardiopatia_Isquemica">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Cetoacidosis -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Cetoacidosis">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Comorbilidad -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+        <rdfs:comment>La &quot;comorbilidad&quot;, también conocida como &quot;morbilidad asociada&quot;, es un término utilizado para describir dos o más trastornos o enfermedades que ocurren en la misma persona. Pueden ocurrir al mismo tiempo o uno después del otro.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Depresion -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Depresion">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Diabetes_Mellitus -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Diabetes_Mellitus">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Aprendizaje -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Aprendizaje">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Auditiva -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Auditiva">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Autocuidado -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Autocuidado">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Comunicacion -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Comunicacion">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Mental -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Mental">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Motora -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Motora">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Odontologica -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Odontologica">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Visual -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Discapacidad_Visual">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Dislipidemia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Enfermedad -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Enfermedad">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Evento_Cerebrovascular -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Evento_Cerebrovascular">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Hepatitis -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Hepatitis">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Hipertensión -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Hipertensión">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Hiperuricemia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Hiperuricemia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Insuficiencia_Renal -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Insuficiencia_Renal">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Necrobiosis -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Necrobiosis">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Neuropatia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Neuropatia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Obesidad -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Obesidad">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Otras_Comorbilidades -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Otras_Comorbilidades">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Padecimiento -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Proceso_Infeccioso -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Proceso_Infeccioso">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Retinopatia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Retinopatia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Tuberculosis -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Tuberculosis">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Uropatia -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#Uropatia">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#VIH-SIDA -->
+
+    <owl:Class rdf:about="http://www.padecimientos-mexico.org/enfermedad#VIH-SIDA">
+        <rdfs:subClassOf rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Comorbilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Catarata -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Catarata">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Retinopatia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#CetoacidosisDiabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#CetoacidosisDiabetica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Cetoacidosis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Deshidratacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Deshidratacion">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Diabetes_Mellitus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Diabetes_Mellitus"/>
+        <enfermedad:puedeCausar rdf:resource="http://www.padecimientos-mexico.org/enfermedad#EstadoHiperosmolarHiperglucemico"/>
+        <enfermedad:puedeCausar rdf:resource="http://www.padecimientos-mexico.org/enfermedad#NefropatiaDiabetica"/>
+        <enfermedad:puedeCausar rdf:resource="http://www.padecimientos-mexico.org/enfermedad#NeuropatiaDiabetica"/>
+        <enfermedad:puedeCausar rdf:resource="http://www.padecimientos-mexico.org/enfermedad#RetinopatiaDiabetica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#EnfermedadAcidoPeptica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#EnfermedadAcidoPeptica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#EstadoHiperosmolarHiperglucemico -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#EstadoHiperosmolarHiperglucemico">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Estreñimiento -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Estreñimiento">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Hipertensión"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Hipoglucemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Hipoglucemia">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#HipotiroidismoSubclinicoPorDeficienciaDeYodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#HipotiroidismoSubclinicoPorDeficienciaDeYodo">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#InsuficienciaCardiacaNoEspecifica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#InsuficienciaCardiacaNoEspecifica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Cardiopatia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueCardiacoNoEspecificada -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueCardiacoNoEspecificada">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueNoEspecificada -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueNoEspecificada">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#NefropatiaDiabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#NefropatiaDiabetica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Insuficiencia_Renal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#NeuropatiaDiabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#NeuropatiaDiabetica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Neuropatia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado1">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Obesidad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado2">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Obesidad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado3">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Obesidad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#ObesidadNoEspecifica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#ObesidadNoEspecifica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Obesidad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#OtrosTrastornosDelSistemaUrinario -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#OtrosTrastornosDelSistemaUrinario">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Uropatia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Parkinson -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Parkinson">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#QuisteEpidermico -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#QuisteEpidermico">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#RetinopatiaDiabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#RetinopatiaDiabetica">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Retinopatia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#RetinopatiasDelFondoYCambiosVascularesRetinianos -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#RetinopatiasDelFondoYCambiosVascularesRetinianos">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#OtrasEnfermedades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Senilidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Senilidad">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#SindromeDelColonIrritableSinDiarrea -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#SindromeDelColonIrritableSinDiarrea">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Otros_Padecimientos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#Dislipidemia(Hipertrigliceridemia) -->
+
+    <owl:NamedIndividual rdf:about="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia(Hipertrigliceridemia)">
+        <rdf:type rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

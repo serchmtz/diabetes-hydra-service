@@ -1,0 +1,1240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.diabetes-mexico.org/red"
+     xml:base="http://www.diabetes-mexico.org/red"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:red="http://www.diabetes-mexico.org/red#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:datos="http://www.modelo.org/datos#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:estados="http://www.estados-mexico.org/estados#"
+     xmlns:niveles="http://www.niveleseducativos-mexico.org/niveles#"
+     xmlns:persona="http://www.personas-mexico.org/persona#"
+     xmlns:enfermedad="http://www.padecimientos-mexico.org/enfermedad#"
+     xmlns:tratamiento="http://www.medida-control.com/tratamiento#"
+     xmlns:medicamentos="http://www.owl-ontologies.com/medicamentos.owl#">
+    <owl:Ontology rdf:about="http://www.diabetes-mexico.org/red">
+        <owl:imports rdf:resource="http://www.estados-mexico.org/estados"/>
+        <owl:imports rdf:resource="http://www.medida-control.com/tratamiento"/>
+        <owl:imports rdf:resource="http://www.modelo.org/datos"/>
+        <owl:imports rdf:resource="http://www.niveleseducativos-mexico.org/niveles"/>
+        <owl:imports rdf:resource="http://www.owl-ontologies.com/medicamentos.owl"/>
+        <owl:imports rdf:resource="http://www.padecimientos-mexico.org/enfermedad"/>
+        <owl:imports rdf:resource="http://www.personas-mexico.org/persona"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneCantidadIndicada -->
+
+    <owl:AnnotationProperty rdf:about="http://www.diabetes-mexico.org/red#tieneCantidadIndicada"/>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicada -->
+
+    <owl:AnnotationProperty rdf:about="http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicada"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#esRedactadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#esRedactadaPor">
+        <owl:inverseOf rdf:resource="http://www.diabetes-mexico.org/red#redactaNotaMedica"/>
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.personas-mexico.org/persona#Medico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#redactaNotaMedica -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#redactaNotaMedica">
+        <rdfs:domain rdf:resource="http://www.personas-mexico.org/persona#Medico"/>
+        <rdfs:range rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#resideEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#resideEn">
+        <rdfs:domain rdf:resource="http://www.personas-mexico.org/persona#Paciente"/>
+        <rdfs:range rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneActivoEnReceta -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneActivoEnReceta">
+        <rdfs:domain rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+        <rdfs:range rdf:resource="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneDiagnostico -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneDiagnostico">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneDiscapacidad -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneDiscapacidad">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Historia_Clinica"/>
+        <rdfs:range rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Discapacidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneEscolaridad -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneEscolaridad">
+        <rdfs:domain rdf:resource="http://www.personas-mexico.org/persona#Paciente"/>
+        <rdfs:range rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneExpedienteClinico -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneExpedienteClinico">
+        <rdfs:domain rdf:resource="http://www.personas-mexico.org/persona#Paciente"/>
+        <rdfs:range rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneTratamiento -->
+
+    <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#tieneTratamiento">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#ICD10 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#ICD10">
+        <rdfs:domain rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Contiene las claves de un padecimiento respecto a la clasificación internacional de enfermedades volumen 10</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#SCTID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#SCTID">
+        <rdfs:domain rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Contiene las claves de SnomedCT relacionada a los padecimientos.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneAlerta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#tieneAlerta">
+        <rdfs:domain rdf:resource="http://www.modelo.org/datos#Nota_Medica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneCantidadIndicadaEnReceta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#tieneCantidadIndicadaEnReceta">
+        <rdfs:domain rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicadaEnReceta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicadaEnReceta">
+        <rdfs:domain rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#tieneMedidaIndicadaEnReceta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diabetes-mexico.org/red#tieneMedidaIndicadaEnReceta">
+        <rdfs:domain rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.modelo.org/datos#tieneICC -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#tieneICC">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diabetes-mexico.org/red#Dosis_En_Receta -->
+
+    <owl:Class rdf:about="http://www.diabetes-mexico.org/red#Dosis_En_Receta">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneActivoEnReceta"/>
+                        <owl:someValuesFrom rdf:resource="http://www.medida-control.com/tratamiento#Tratamiento_Farmacologico"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneCantidadIndicadaEnReceta"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneFrecuenciaIndicadaEnReceta"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneMedidaIndicadaEnReceta"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Contine la dosis indicada en la receta, la cual debería estar dentro de los parametros establecidos en la dosis indicada por el sector salud</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.modelo.org/datos#Biotipo -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Biotipo">
+        <owl:disjointWith rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Historia_Clinica -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Historia_Clinica">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneAntecedentesGinecoObstetricos"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneAntecedentesHeredoFamiliares"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneAntecedentesPersonalesNoPatologicos"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneAntecedentesPersonalesPatologicos"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota_Medica -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota_Medica">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneTratamiento"/>
+                        <owl:someValuesFrom rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneBiotipo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.modelo.org/datos#Biotipo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneDiagnostico"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Padecimiento"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneGlucosaPostPrandial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneAnalisis"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneExploracionFisica"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneFecha"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneFrecuenciaCardiaca"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneFrecuenciaRespiratoria"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneICC"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneIMC"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tienePadecimientoActual"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tienePeso"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneTMB"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneTalla"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.modelo.org/datos#tieneTemperaturaCorporal"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.niveleseducativos-mexico.org/niveles#Escolaridad -->
+
+    <rdf:Description rdf:about="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#Medico -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#Medico">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tieneCedulaProfesional"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#Paciente -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#Paciente">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#resideEn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneEscolaridad"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.niveleseducativos-mexico.org/niveles#Escolaridad"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneExpedienteClinico"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.modelo.org/datos#Expediente_Clinico"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tieneFechaNacimiento"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tieneSexo"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#Persona -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#Persona">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tieneNombre"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tienePrimerApellido"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.personas-mexico.org/persona#tieneSegundoApellido"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Acido_Acetilsalicilico"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Ibuprofeno -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#Ibuprofeno">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Ibuprofeno"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaAspart -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#InsulinaAspart">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Aspartato"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaDetemir -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#InsulinaDetemir">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Detemir"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaGlargina -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#InsulinaGlargina">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glargina"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaGlusina -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#InsulinaGlusina">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glulisina"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#InsulinaLispro -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#InsulinaLispro">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Lispro"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Metformina -->
+
+    <rdf:Description rdf:about="http://www.medida-control.com/tratamiento#Metformina">
+        <owl:sameAs rdf:resource="http://www.owl-ontologies.com/medicamentos.owl#Metformina"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#PolivitaminasYMinerales -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#PolivitaminasYMinerales"/>
+    
+
+
+    <!-- http://www.medida-control.com/tratamiento#Propanol -->
+
+    <owl:NamedIndividual rdf:about="http://www.medida-control.com/tratamiento#Propanol"/>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota1 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota1">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#ObesidadNoEspecifica"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota10 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota10">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#SindromeDelColonIrritableSinDiarrea"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota11 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota11">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota12 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota12">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#OtrosTrastornosDelSistemaUrinario"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota13 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota13">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota14 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota14">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota15 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota15">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota16 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota16">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota17 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota17">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota18 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota18">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota19 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota19">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota2 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota2">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipotiroidismoSubclinicoPorDeficienciaDeYodo"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid71">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#InsulinaGlargina"/>
+                <red:tieneMedidaIndicadaEnReceta>UI</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota20 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota20">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia(Hipertrigliceridemia)"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid72">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Bezafibrato"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid73">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid74">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Glibenclamida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid75">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Captopril"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid76">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota21 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota21">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia(Hipertrigliceridemia)"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid77">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Bezafibrato"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid78">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid79">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Glibenclamida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid80">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Captopril"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid81">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#ComplejoB"/>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid82">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota22 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota22">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#EnfermedadAcidoPeptica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Dislipidemia(Hipertrigliceridemia)"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid83">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Bezafibrato"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid84">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid85">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Glibenclamida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid86">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Captopril"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid87">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Ranitidina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid88">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid89">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#HidroxidoDeAluminioYMagnesio"/>
+                <red:tieneMedidaIndicadaEnReceta>ML</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota23 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota23">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#ObesidadGrado2"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid90">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid91">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Glibenclamida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid92">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Captopril"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid93">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Nifedipino"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid94">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota24 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota24">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Parkinson"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid95">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Levodopa-Cardiodopa"/>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid96">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid97">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Furosemida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid98">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Propanol"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid99">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid100">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#PolivitaminasYMinerales"/>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid101">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#FumaratoFerroso"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid102">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Bezafibrato"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota25 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota25">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Estreñimiento"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica"/>
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#Senilidad"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid103">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Metformina"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">850.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid104">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Furosemida"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid105">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Propanol"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid106">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Levodopa-Cardiodopa"/>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid107">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#AcidoAcetilsalicilico"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota3 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota3">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueNoEspecificada"/>
+        <red:tieneTratamiento>
+            <rdf:Description rdf:nodeID="genid108">
+                <rdf:type rdf:resource="http://www.diabetes-mexico.org/red#Dosis_En_Receta"/>
+                <red:tieneActivoEnReceta rdf:resource="http://www.medida-control.com/tratamiento#Ibuprofeno"/>
+                <red:tieneMedidaIndicadaEnReceta>MG</red:tieneMedidaIndicadaEnReceta>
+                <red:tieneCantidadIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</red:tieneCantidadIndicada>
+                <red:tieneFrecuenciaIndicada rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</red:tieneFrecuenciaIndicada>
+            </rdf:Description>
+        </red:tieneTratamiento>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota4 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota4">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#InsuficienciaCardiacaNoEspecifica"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota5 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota5">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota6 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota6">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#MalformacionCongenitaDelTabiqueCardiacoNoEspecificada"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota7 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota7">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#QuisteEpidermico"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota8 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota8">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#RetinopatiasDelFondoYCambiosVascularesRetinianos"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.modelo.org/datos#Nota9 -->
+
+    <rdf:Description rdf:about="http://www.modelo.org/datos#Nota9">
+        <red:tieneDiagnostico rdf:resource="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Acido_Acetilsalicilico -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Acido_Acetilsalicilico"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Ibuprofeno -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Ibuprofeno"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Insulina_Aspartato -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Aspartato"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Insulina_Detemir -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Detemir"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glargina -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glargina"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glulisina -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Glulisina"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Insulina_Lispro -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Insulina_Lispro"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/medicamentos.owl#Metformina -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/medicamentos.owl#Metformina"/>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1 -->
+
+    <rdf:Description rdf:about="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo1">
+        <red:ICD10 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E10</red:ICD10>
+        <red:SCTID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46635009</red:SCTID>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2 -->
+
+    <rdf:Description rdf:about="http://www.padecimientos-mexico.org/enfermedad#DiabetesMellitusTipo2">
+        <red:ICD10 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E11</red:ICD10>
+        <red:SCTID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44054006</red:SCTID>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica -->
+
+    <rdf:Description rdf:about="http://www.padecimientos-mexico.org/enfermedad#HipertensionArterialSistemica">
+        <red:ICD10>I10</red:ICD10>
+        <red:SCTID>59621000</red:SCTID>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente1 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente1">
+        <red:resideEn rdf:resource="http://www.estados-mexico.org/estados#Puebla"/>
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente1"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente2 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente2">
+        <red:resideEn rdf:resource="http://www.estados-mexico.org/estados#Puebla"/>
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente2"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente3 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente3">
+        <red:resideEn rdf:resource="http://www.estados-mexico.org/estados#Puebla"/>
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente3"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente4 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente4">
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente4"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente5 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente5">
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente5"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.personas-mexico.org/persona#paciente6 -->
+
+    <rdf:Description rdf:about="http://www.personas-mexico.org/persona#paciente6">
+        <red:tieneExpedienteClinico rdf:resource="http://www.modelo.org/datos#Expediente6"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

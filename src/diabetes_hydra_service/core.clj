@@ -34,4 +34,4 @@
 (defn -main [& args]
   (println "Starting Hydra server...")
   (start-api)
-  (println "Hydra server started on" config/server-host))
+  (println "Hydra server started on" config/base))

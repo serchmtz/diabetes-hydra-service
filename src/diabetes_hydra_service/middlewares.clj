@@ -26,6 +26,7 @@
           response (middleware request)
           headers (:headers response)
           headers (assoc headers "Content-Type" "application/ld+json")
+          headers (assoc headers "Link" (str "<" config/base "api/vocab>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""))
           response (assoc response :status 200)          
           response (assoc response :headers headers)
           body (json/generate-string {"@context" ["https://www.w3.org/ns/hydra/core"

@@ -3,7 +3,15 @@
    [tawny.lookup :as l]
    [tawny.owl :as owl]
    [tawny.query :as q]
-   [tawny.reasoner :as rs]))
+   [tawny.reasoner :as rs])
+  ;; [tawny.read :as twr]
+  ;; [clojure.java.io :as io]
+  ;; [tawny.owl :as owl]
+  ;; [levanzo.xsd :as xsd]
+  ;; [levanzo.namespaces :refer [define-rdf-ns] :as lns]
+  ;; (:import
+  ;;  org.semanticweb.owlapi.util.AutoIRIMapper)
+  )
 
 
 ;; (clojure.java.javadoc/add-remote-javadoc "org.semanticweb." "http://owlcs.github.io/owlapi/apidocs_4/")
@@ -23,6 +31,13 @@
 ;;  :viri "http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#"
 ;;  :mapper (AutoIRIMapper. (io/file "resources") true))
 
+
+;; (twr/defread red-ont
+;;   :location (owl/iri (io/resource "red_nodos_RDF.owl"))
+;;   :prefix "red"
+;;   :iri "http://www.diabetes-mexico.org/red"
+;;   :viri "http://www.diabetes-mexico.org/red"
+;;   :mapper (AutoIRIMapper. (io/file "resources") true))
 
 
 (rs/reasoner-factory :hermit)

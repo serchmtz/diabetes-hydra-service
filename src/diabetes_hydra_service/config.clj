@@ -8,5 +8,3 @@
 (def port (or (System/getenv "PORT") 8080))
 (def host (or (System/getenv "HOST") "localhost"))
 (def base (str "http://" host ":" port "/"))
-(payload/context {:vocab (str base "vocab#")
-                  :base base})

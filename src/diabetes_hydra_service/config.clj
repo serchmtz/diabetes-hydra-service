@@ -4,6 +4,6 @@
             [clojure.string :as string]))
 
 
-(def port (Integer/parseInt (or (System/getenv "SERVER_PORT") "8080")))
-(def host (or (System/getenv "SERVER_HOST") "localhost"))
+(def port (Integer/parseInt (or (System/getenv "PORT") "8080")))
+(def host (or (System/getenv "HOST") "localhost"))
 (def base (str "http://" host ":" port "/"))

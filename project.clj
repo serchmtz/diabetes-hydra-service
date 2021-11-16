@@ -6,7 +6,7 @@
   :plugins [[reifyhealth/lein-git-down "0.4.0"]]
   :repositories [;; ["internal" "file:///home/sergio/mavenrepo"]
                  ["public-github" {:url "git://github.com"}]]
-  :min-lein-version "2.9.7"
+  :min-lein-version "2.9.1"
   :middleware [lein-git-down.plugin/inject-properties]
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [uk.org.russet/tawny-owl "2.3.0" :exclusions [com.fasterxml.jackson.core/jackson-core

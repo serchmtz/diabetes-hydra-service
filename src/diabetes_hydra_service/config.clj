@@ -7,4 +7,4 @@
 (def port (Integer/parseInt (or (System/getenv "PORT") "8080")))
 (def host (or (System/getenv "HOST") "localhost"))
 (def base (str protocol "://" host ":" port "/"))
-(def prod-base (or (System/getenv "PROD_BASE") base))
+(def server-host (or (System/getenv "SERVER_HOST") base))

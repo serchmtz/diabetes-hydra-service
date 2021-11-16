@@ -5,6 +5,6 @@
 
 (http/set-debug-errors! true)
 
-(def port (or (System/getenv "PORT") 8080))
+(def port (or (Integer/parseInt (System/getenv "PORT")) 8080))
 (def host (or (System/getenv "HOST") "localhost"))
 (def base (str "http://" host ":" port "/"))

@@ -1,5 +1,6 @@
 (ns diabetes-hydra-service.entities.entrypoint
   (:require [levanzo.hydra :as hydra]
+            [diabetes-hydra-service.entities.core :refer [register-class]]
             [diabetes-hydra-service.namespaces :refer [vocab]]
             [diabetes-hydra-service.entities.persona :as persona]))
 
@@ -31,15 +32,18 @@
 
 (def personas-prop
   (hydra/supported-property
-   {::hydra/id (vocab "EntryPoint/personas")
-    ::hydra/title "personas"
-    ::hydra/description "All Personas"
+   {::hydra/title "personas"
+    ::hydra/description "Colección de todas las personas."
+    ::hydra/required true
     ::hydra/property personas-link
     ::hydra/operations
     [(hydra/get-operation
-      {::hydra/returns (hydra/id persona/PersonaCollection)})
+      {::hydra/id (vocab "get-personas")
+       ::hydra/expexts nil       
+       ::hydra/returns (hydra/id persona/PersonaCollection)})
      (hydra/post-operation
-      {::hydra/expects (hydra/id persona/Persona)
+      {::hydra/id (vocab "post-persona")
+       ::hydra/expects (hydra/id persona/Persona)
        ::hydra/returns (hydra/id persona/Persona)})]
     }))
 
@@ -62,6 +66,9 @@
     ;;                            ::hydra/returns (persona "Persona")})]})]
     ::hydra/operations
     [(hydra/get-operation
-      {::hydra/returns (vocab "EntryPoint")
+      {::hydra/id (vocab "get-entrypoint")
+       ::hydra/returns (vocab "EntryPoint")
        ::hydra/title "EntryPoint"
        ::hydra/description "The API main entry point"})]}))
+
+(register-class EntryPoint)

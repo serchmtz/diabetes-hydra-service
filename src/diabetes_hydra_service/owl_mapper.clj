@@ -1,17 +1,15 @@
 (ns diabetes-hydra-service.owl-mapper
   (:require
+   [clojure.java.io :as io]
    [tawny.lookup :as l]
    [tawny.owl :as owl]
    [tawny.query :as q]
-   [tawny.reasoner :as rs])
-  ;; [tawny.read :as twr]
-  ;; [clojure.java.io :as io]
-  ;; [tawny.owl :as owl]
-  ;; [levanzo.xsd :as xsd]
-  ;; [levanzo.namespaces :refer [define-rdf-ns] :as lns]
-  ;; (:import
-  ;;  org.semanticweb.owlapi.util.AutoIRIMapper)
-  )
+   [tawny.reasoner :as rs]
+   [tawny.read :as twr]
+   [levanzo.hydra :as hydra])
+  (:import
+   [org.semanticweb.owlapi.model OWLDataOneOf]
+   org.semanticweb.owlapi.util.AutoIRIMapper))
 
 
 ;; (clojure.java.javadoc/add-remote-javadoc "org.semanticweb." "http://owlcs.github.io/owlapi/apidocs_4/")
@@ -32,203 +30,131 @@
 ;;  :mapper (AutoIRIMapper. (io/file "resources") true))
 
 
-;; (twr/defread red-ont
-;;   :location (owl/iri (io/resource "red_nodos_RDF.owl"))
-;;   :prefix "red"
-;;   :iri "http://www.diabetes-mexico.org/red"
-;;   :viri "http://www.diabetes-mexico.org/red"
-;;   :mapper (AutoIRIMapper. (io/file "resources") true))
+(twr/defread red-ont
+  :location (owl/iri (io/resource "red_nodos_RDF.owl"))
+  :prefix "red"
+  :iri "http://www.diabetes-mexico.org/red"
+  :viri "http://www.diabetes-mexico.org/red"
+  :mapper (AutoIRIMapper. (io/file "resources") true))
 
 
 (rs/reasoner-factory :hermit)
 ;;(rs/consistent? red)
 
 (owl/defno get-prefix
-  [o]
+  [onto]
   (-> (owl/owl-ontology-manager)
-      (.getOntologyFormat o)
+      (.getOntologyFormat onto)
       .asPrefixOWLOntologyFormat))
 
 (owl/defno get-prefixed-class
   "Return a class of ontology o with prefixed name"
-  [o name]
-  (let [prefixm (get-prefix o)]
+  [onto name]
+  (let [prefixm (get-prefix onto)]
     (.getOWLClass (owl/owl-data-factory) name prefixm)))
 
 (owl/defno get-prefixed-individual
   "Return a individual of ontology o with prefixed name"
-  [o name]
-  (let [prefixm (get-prefix o)]
+  [onto name]
+  (let [prefixm (get-prefix onto)]
     (.getOWLNamedIndividual (owl/owl-data-factory) name prefixm)))
 
 (owl/defno get-prefixed-data-prop
   "Return a DataPropety of ontology o with prefixed name"
-  [o name]
-  (let [prefixm (get-prefix o)]
+  [onto name]
+  (let [prefixm (get-prefix onto)]
     (.getOWLDataProperty (owl/owl-data-factory) name prefixm)))
 
 (owl/defno get-prefixed-obj-prop
   "Return a ObjectPropety of ontology o with prefixed name"
-  [o name]
-  (let [prefixm (get-prefix o)]
+  [onto name]
+  (let [prefixm (get-prefix onto)]
     (.getOWLObjectProperty (owl/owl-data-factory) name prefixm)))
 
-;; (owl/defno get-class-obj-props
-;;   "Return all object properties of class name"
-;;   [o name]
-;;   (let [cls (get-prefixed-class o name)
-;;         parents (clojure.set/union #{cls} (rs/isuperclasses cls))]
-;;     (remove nil?
-;;             (for [prop (q/map-imports q/obj-props o)
-;;                   :let [domains (->> (.getObjectPropertyDomains (rs/reasoner) prop true)
-;;                                      rs/entities
-;;                                      rs/no-top-bottom)]]
-;;               (when (clojure.set/subset? domains parents)
-;;                 {:prop prop
-;;                  :range (rs/entities (.getObjectPropertyRanges (rs/reasoner) prop true))})))))
-
-;; (owl/defno get-class-data-props
-;;   "Return all data properties of class name"
-;;   [o name]
-;;   (let [cls (get-prefixed-class o name)
-;;         parents (clojure.set/union #{cls} (rs/isuperclasses cls))]
-;;     (remove nil?
-;;             (for [prop (q/map-imports q/data-props o)
-;;                   :let [domains (->> (.getDataPropertyDomains (rs/reasoner) prop true)
-;;                                      rs/entities
-;;                                      rs/no-top-bottom)]]
-;;               (when (clojure.set/subset? domains parents)
-;;                 {:prop prop
-;;                  :range (->> (q/map-imports (fn [ont]
-;;                                               (.getDataPropertyRangeAxioms ont prop)) o)
-;;                              )})))))
-
-;; (defn owl-data-props-map-to-clj
-;;   [data-props]
-;;   (mapv (fn [p] {:prop (.toStringID (:prop p))
-;;                :range (->> (:range p)
-;;                            (map (fn [ax]
-;;                                   (let [range (.getRange ax)]
-;;                                     (if (instance? OWLDataOneOf range)
-;;                                       (->> (.getValues range)
-;;                                            (mapv #(.. % getLiteral)))
-;;                                       (.toStringID range)))))
-;;                            first)})
-;;         data-props))
-;; (#{:foo :bar} :foo)
-
-;; (defn unnamed-entity? [k]
-;;   (#{:and :or :not :some :oneof} k))
-
-
-;; (defn named-entity? [e]
-;;   (cond
-;;     (and (map? e) (:iri e)) true
-;;     (and (seq? e) (some #{:iri} e)) true
-;;     :else false))
-
-;; (owl/defno form-to-recur-map
-;;   [o form]
-;;   (->> form
-;;        (clojure.walk/postwalk
-;;         (fn [v]
-;;           ;; (println "Current: " v)
-;;           (cond
-;;             ;; v is a seq of maps so realize it to vector
-;;             (and (seq? v) (> (count v) 1)(every? map? v))
-;;             (vec v)
-;;             ;; v is a sequence with even items and each item is not unammed entity
-;;             ;; so realize it to a hash map
-;;             (and (seq? v)                                       
-;;                  (even? (count v))
-;;                  (every? #(not (unnamed-entity? %))  v))
-;;             (apply hash-map v)
-
-;;             ;; v is a sequence where at least one is a unnamed entity
-;;             ;; so transform v in a map with the unnamed entity as key and the rest
-;;             ;; as vector value
-;;             (and (seq? v) (some unnamed-entity? v))
-;;             {(some unnamed-entity? v) (vec (remove unnamed-entity? v)) }
-;;             ;; v is sequence of only one item
-;;             ;; so unfolded
-;;             (and (seq? v) (= (count v) 1))
-;;             (first v)
-;;             ;; general form of v being a sequence
-;;             ;; so realize it to vector
-;;             (seq? v)
-;;             (vec v)
-
-;;             ;; (and (seq? v) (= 2 (count v)))
-;;             ;; v is a symbol, therefore it's a name in the current ontology
-;;             ;; so resolve the name to {:iri "value"} maps
-;;             (symbol? v)
-;;             (apply hash-map (rdr/as-form (owl/iri-for-name o v) :keyword true))
-;;             ;; anything else just return v
-;;             :else v)))))
-
-;; (owl/defno resolve-recur-map
-;;   [o rmap]
-;;   (->> rmap
-;;        (clojure.walk/postwalk
-;;         (fn [v]        
-;;           (cond
-;;             (map? v)
-;;             (let [k (some (fn [[k _vs]] (unnamed-entity? k)) v)
-;;                   props (get v k)]
-;;               (->>
-;;                (for[x props]
-;;                  )
-;;                doall
-;;                ))
-;;             :else v)
-;;           v))))
-
-;; (s/def ::iri-seq (s/cat :kw  #{:iri}
-;;                         :value string?))
-
-;; (s/def ::property (s/*
-;;                    (s/cat :kws (s/alt :kw keyword? :sym symbol? :iri (s/and ::iri-seq))
-;;                           :val (s/alt :kw keyword? :str string? :num number? :iri (s/and ::iri-seq)))))
-
-;; (s/conform ::property '  (:some
-;;                           (:iri "http://www.modelo.org/datos#tieneGlucosaPostPrandial")
-;;                           :XSD_INTEGER))
+(owl/defno data-prop-to-map
+  [onto prop]
+  {:prop (l/named-entity-as-string prop)
+   :prop-name (-> (l/named-entity-as-string prop) owl/iri .getFragment)
+   :prop-type :data-prop
+   :range (->> (q/map-imports #(.getDataPropertyRangeAxioms % prop) onto)
+               (map
+                (fn [ax]
+                  (let [range (.getRange ax)]
+                    (if (instance? OWLDataOneOf range)
+                      (let [literals (.getValues range)
+                            values (mapv #(.getLiteral %) literals)
+                            dtype (-> owl/owl2datatypes
+                                      :XSD_STRING
+                                      .toStringID)]
+                        {:type dtype
+                         :values values})
+                      {:type (.toStringID range)}))))
+               first)})
 
 (owl/defno get-data-props
-  [o owlclass]
+  [onto owlclass]
   (let [parents (clojure.set/union #{owlclass} (rs/isuperclasses owlclass))]
     (->>
-     (for [prop (q/map-imports q/data-props o)
+     (for [prop (q/map-imports q/data-props onto)
            :let [domain (->> (.getDataPropertyDomains (rs/reasoner) prop false)
                              rs/entities
                              rs/no-top-bottom)]]
        (when (clojure.set/subset? domain parents)
-         {:data-prop (l/named-entity-as-string prop)
-          :range (->> (q/map-imports #(.getDataPropertyRangeAxioms % prop) o)
-                      (map #(->> (.getDatatypesInSignature %)
-                                 (map (fn [dt] (.toStringID dt)))
-                                 set))
-                      first)}))
+         (data-prop-to-map onto prop)))
      (remove nil?)
      vec)))
 
 
+(owl/defno object-prop-to-map
+  [_ prop]
+  {:prop (l/named-entity-as-string prop)
+   :prop-name (-> (l/named-entity-as-string prop) owl/iri .getFragment)
+   :prop-type :object-prop
+   :range (->>
+           (.getObjectPropertyRanges (rs/reasoner) prop true)
+           rs/entities
+           (map (fn [e] (.toStringID e)))
+           first
+           (assoc {} :type ))})
+
 (owl/defno get-object-props
-  [o owlclass]
+  [onto owlclass]
   (let [parents (clojure.set/union #{owlclass} (rs/isuperclasses owlclass))]
     (->>
-     (for [prop (q/map-imports q/obj-props o)
+     (for [prop (q/map-imports q/obj-props onto)
            :let [domain (->> (.getObjectPropertyDomains (rs/reasoner) prop false)
                              rs/entities
                              rs/no-top-bottom)]]
        (when (clojure.set/subset? domain parents)
-         {:data-prop (l/named-entity-as-string prop)
-          :range (->>
-                  (.getObjectPropertyRanges (rs/reasoner) prop true)
-                  rs/entities
-                  (map (fn [e] (.toStringID e)))
-                  set)}))
+         (object-prop-to-map prop)))
      (remove nil?)
      vec)))
 
+(defn prop-map-to-hydra
+  [{:keys [prop prop-name prop-type range]}]
+  (let [prop-fn (get {:object-prop hydra/link
+                      :data-prop hydra/property} prop-type)]
+    (prop-fn
+     {::hydra/id prop
+      ::hydra/range (:type range)
+      ::hydra/title prop-name})))
 
+(owl/defno owl-class-to-hydra
+  ([onto classname]
+   (owl-class-to-hydra onto classname nil))
+  ([onto classname operations]
+   (let [owlclass (get-prefixed-class onto classname)
+         operations (or operations [])
+         dprops (get-data-props onto owlclass)
+         oprops (get-object-props onto owlclass)
+         sprops (->> (concat dprops oprops)
+                     (map #(hydra/supported-property
+                            {::hydra/property (prop-map-to-hydra %)
+                             ::hydra/required true})))]
+     (hydra/class
+      {::hydra/id (l/named-entity-as-string owlclass)
+       ::hydra/title (-> (l/named-entity-as-string owlclass) owl/iri .getFragment)
+       ::hydra/supported-properties
+       (vec sprops)
+       ::hydra/operations
+       operations}))))

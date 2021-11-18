@@ -23,7 +23,8 @@
        persona/PersonaCollection
        (make-absolute-path
         (payload/id {:model persona/PersonaCollection}))
-       (payload/members (vals @persona-db)))
+       (payload/members (vals @persona-db))
+       (payload/total-items (count (vals @persona-db))))
       payload/compact))
 
 

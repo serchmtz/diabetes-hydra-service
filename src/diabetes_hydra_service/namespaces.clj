@@ -21,4 +21,4 @@
 (define-rdf-ns enfermedad "http://www.padecimientos-mexico.org/enfermedad#")
 (define-rdf-ns tratamiento "http://www.medida-control.com/tratamiento#")
 (define-rdf-ns medicamentos "http://www.owl-ontologies.com/medicamentos.owl#")
-
+(define-rdf-ns schema "http://schema.org/")

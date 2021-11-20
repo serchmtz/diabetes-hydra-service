@@ -36,3 +36,4 @@
 (defn clear-registered-classes
   []
   (reset! *supported-classes-registry* {}))
+

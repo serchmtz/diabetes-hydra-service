@@ -37,7 +37,7 @@
   :viri "http://www.diabetes-mexico.org/red"
   :mapper (AutoIRIMapper. (io/file "resources") true))
 
-
+(rs/reasoner-silent)
 (rs/reasoner-factory :hermit)
 ;;(rs/consistent? red)
 
@@ -150,7 +150,7 @@
          sprops (->> (concat dprops oprops)
                      (map #(hydra/supported-property
                             {::hydra/property (prop-map-to-hydra %)
-                             ::hydra/required true})))]
+                             ::hydra/required false})))]
      (hydra/class
       {::hydra/id (l/named-entity-as-string owlclass)
        ::hydra/title (-> (l/named-entity-as-string owlclass) owl/iri .getFragment)

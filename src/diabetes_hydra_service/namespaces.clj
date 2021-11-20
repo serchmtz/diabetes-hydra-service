@@ -2,8 +2,8 @@
   (:require [levanzo.namespaces :refer [define-rdf-ns default-ns] :as lns]
             [diabetes-hydra-service.config :as config]))
 
-(reset! lns/*ns-register* {})
-(reset! lns/*inverse-ns-register* {})
+;; (reset! lns/*ns-register* {})
+;; (reset! lns/*inverse-ns-register* {})
 
 (define-rdf-ns vocab (str config/base "api/vocab#"))
 (define-rdf-ns lvz "http://levanzo.org/vocab#")

@@ -30,6 +30,7 @@
           response (assoc response :status 200)          
           response (assoc response :headers headers)
           body (json/generate-string {"@context" ["https://www.w3.org/ns/hydra/core"
+                                                  
                                                   (merge
                                                    @lns/*ns-register*
                                                    {"@base" config/base

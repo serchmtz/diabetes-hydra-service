@@ -21,9 +21,9 @@
     
 
 
-    <!-- http://www.estados-mexico.org/estados#Localización_Geografica -->
+    <!-- http://www.estados-mexico.org/estados#Localizacion_Geografica -->
 
-    <owl:Class rdf:about="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+    <owl:Class rdf:about="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     
 
 
@@ -41,7 +41,7 @@
     <!-- http://www.estados-mexico.org/estados#Aguascalientes -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Aguascalientes">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -49,7 +49,7 @@
     <!-- http://www.estados-mexico.org/estados#BajaCalifornia -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#BajaCalifornia">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -57,7 +57,7 @@
     <!-- http://www.estados-mexico.org/estados#BajaCaliforniaSur -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#BajaCaliforniaSur">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -65,7 +65,7 @@
     <!-- http://www.estados-mexico.org/estados#Campeche -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Campeche">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -73,7 +73,7 @@
     <!-- http://www.estados-mexico.org/estados#Chiapas -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Chiapas">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -81,7 +81,7 @@
     <!-- http://www.estados-mexico.org/estados#Chihuahua -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Chihuahua">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -89,7 +89,7 @@
     <!-- http://www.estados-mexico.org/estados#CiudadDeMexico -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#CiudadDeMexico">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -97,7 +97,7 @@
     <!-- http://www.estados-mexico.org/estados#Coahuila -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Coahuila">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -105,7 +105,7 @@
     <!-- http://www.estados-mexico.org/estados#Colima -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Colima">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -113,7 +113,7 @@
     <!-- http://www.estados-mexico.org/estados#Durango -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Durango">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -121,7 +121,7 @@
     <!-- http://www.estados-mexico.org/estados#EstadoDeMexico -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#EstadoDeMexico">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -129,7 +129,7 @@
     <!-- http://www.estados-mexico.org/estados#Guanajuato -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Guanajuato">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -137,7 +137,7 @@
     <!-- http://www.estados-mexico.org/estados#Guerrero -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Guerrero">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -145,7 +145,7 @@
     <!-- http://www.estados-mexico.org/estados#Hidalgo -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Hidalgo">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -153,7 +153,7 @@
     <!-- http://www.estados-mexico.org/estados#Jalisco -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Jalisco">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -161,7 +161,7 @@
     <!-- http://www.estados-mexico.org/estados#Michoacan -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Michoacan">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -169,7 +169,7 @@
     <!-- http://www.estados-mexico.org/estados#Morelos -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Morelos">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -177,7 +177,7 @@
     <!-- http://www.estados-mexico.org/estados#Nayarit -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Nayarit">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -185,7 +185,7 @@
     <!-- http://www.estados-mexico.org/estados#NuevoLeon -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#NuevoLeon">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -193,7 +193,7 @@
     <!-- http://www.estados-mexico.org/estados#Oaxaca -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Oaxaca">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -201,7 +201,7 @@
     <!-- http://www.estados-mexico.org/estados#Puebla -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Puebla">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -209,7 +209,7 @@
     <!-- http://www.estados-mexico.org/estados#Queretaro -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Queretaro">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -217,7 +217,7 @@
     <!-- http://www.estados-mexico.org/estados#QuintanaRoo -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#QuintanaRoo">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -225,7 +225,7 @@
     <!-- http://www.estados-mexico.org/estados#SanLuisPotosi -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#SanLuisPotosi">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -233,7 +233,7 @@
     <!-- http://www.estados-mexico.org/estados#Sinaloa -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Sinaloa">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -241,7 +241,7 @@
     <!-- http://www.estados-mexico.org/estados#Sonora -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Sonora">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -249,7 +249,7 @@
     <!-- http://www.estados-mexico.org/estados#Tabasco -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Tabasco">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -257,7 +257,7 @@
     <!-- http://www.estados-mexico.org/estados#Tamaulipas -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Tamaulipas">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -265,7 +265,7 @@
     <!-- http://www.estados-mexico.org/estados#Tlaxcala -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Tlaxcala">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -273,7 +273,7 @@
     <!-- http://www.estados-mexico.org/estados#Veracruz -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Veracruz">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -281,7 +281,7 @@
     <!-- http://www.estados-mexico.org/estados#Yucatan -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Yucatan">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
     
 
@@ -289,7 +289,7 @@
     <!-- http://www.estados-mexico.org/estados#Zacatecas -->
 
     <owl:NamedIndividual rdf:about="http://www.estados-mexico.org/estados#Zacatecas">
-        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdf:type rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

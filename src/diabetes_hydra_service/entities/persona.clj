@@ -1,133 +1,55 @@
 (ns diabetes-hydra-service.entities.persona
   (:require 
    [levanzo.hydra :as hydra]
-   [levanzo.xsd :as xsd]
-      [diabetes-hydra-service.owl-mapper :as owlm]
-   [diabetes-hydra-service.namespaces :refer [persona]]
+   [diabetes-hydra-service.owl-mapper :as owlm]
+   [diabetes-hydra-service.namespaces :refer [persona]]   
    [diabetes-hydra-service.entities.core :refer [register-class]]))
 
+;; Sets the default ontology
 (tawny.owl/ontology-to-namespace owlm/red-ont)
 
-(def Persona (owlm/owl-class-to-hydra "persona:Persona"))
+(def Persona
+  (owlm/owl-class-to-hydra
+   "persona:Persona"
+   [(hydra/get-operation
+     {::hydra/id (persona "get-persona")
+      ::hydra/title "Obtiene una persona"
+      ::hydra/description "Obtiene una persona"
+      ::hydra/returns (persona "Persona")})
+    (hydra/delete-operation
+     {::hydra/id (persona "delete-persona")
+      ::hydra/title "Elimina una persona"
+      ::hydra/description "Elimina una persona"})]))
 (register-class Persona)
 
-;; Porperties
-;; (def tieneCedulaProfesional
-;;   (hydra/property
-;;    {::hydra/id (persona "tieneCedulaProfesional")
-;;     ::hydra/title "tieneCedulaProfesional"
-;;     ::hydra/description "La cédula profesional de un médico"
-;;     ::hydra/range xsd/string}))
 
-;; (def tieneFechaDeNacimiento
-;;   (hydra/property
-;;    {::hydra/id (persona "tieneFechaDeNacimiento")
-;;     ::hydra/title "tieneFechaDeNacimiento"
-;;     ::hydra/description "La fecha de nacimiento de la persona"
-;;     ::hydra/range xsd/date-time}))
+(def Medico
+  (owlm/owl-class-to-hydra
+   "persona:Medico"
+   [(hydra/get-operation
+     {::hydra/id (persona "get-medico")
+      ::hydra/title "Obtiene un médico"
+      ::hydra/description "Obtiene un médico"
+      ::hydra/returns (persona "Medico")})
+    (hydra/delete-operation
+     {::hydra/id (persona "delete-medico")
+      ::hydra/title "Elimina un médico"
+      ::hydra/description "Elimina un médico"})]))
+(register-class Medico)
 
-;; (def tieneSexo
-;;   (hydra/property
-;;    {::hydra/id (persona "tieneSexo")
-;;     ::hydra/title "tieneSexo"
-;;     ::hydra/description "El género o sexo de la persona"
-;;     ::hydra/range xsd/string}))
-
-;; (def tienePrimerApellido
-;;   (hydra/property
-;;    {::hydra/id (persona "tienePrimerApellido")
-;;     ::hydra/title "tienePrimerApellido"
-;;     ::hydra/description "El primer apellido de la persona"
-;;     ::hydra/range xsd/string}))
-
-;; (def tieneSegundoApellido
-;;   (hydra/property
-;;    {::hydra/id (persona "tieneSegundoApellido")
-;;     ::hydra/title "tieneSegundoApellido"
-;;     ::hydra/description "El segundo apellido de la persona"
-;;     ::hydra/range xsd/string}))
-
-;; (def tieneNombre
-;;   (hydra/property
-;;    {::hydra/id (persona "tieneNombre")
-;;     ::hydra/title "tieneNombre"
-;;     ::hydra/description "El nombre de la persona"
-;;     ::hydra/range xsd/string}))
-
-
-;; ;; Classes
-;; (def Persona
-;;   (hydra/class
-;;    {::hydra/id (persona "Persona")
-;;     ::hydra/title "Persona"
-;;     ::hydra/description "Una persona"
-;;     ::hydra/supported-properties                                   
-;;     [(hydra/supported-property
-;;       {::hydra/property tieneSexo
-;;        ::hydra/required true})
-;;      (hydra/supported-property
-;;       {::hydra/property tieneNombre
-;;        ::hydra/required true})
-;;      (hydra/supported-property
-;;       {::hydra/property tieneSegundoApellido
-;;        ::hydra/required false})
-;;      (hydra/supported-property
-;;       {::hydra/property tienePrimerApellido
-;;        ::hydra/required true})]
-;;     ;; ::hydra/operations
-;;     ;; [(hydra/get-operation {::hydra/returns (persona "Persona")})
-;;     ;;  ;; (hydra/delete-operation {})
-;;     ;;  ]
-;;     }))
-;; (register-class Persona)
-
-;; (def info-basica
-;;   (hydra/link
-;;    {::hydra/id (persona "info-basica")
-;;     ::hydra/title "info-basica"
-;;     ::hydra/description "Información básica de una persona"
-;;     ::hydra/range (hydra/id Persona)}))
-
-;; (def info-basica-link
-;;   (hydra/supported-property
-;;    {::hydra/id (persona "info-basica-link")
-;;     ::hydra/property info-basica
-;;     ::hydra/readonly true
-;;     ::hydra/operations
-;;     [(hydra/get-operation
-;;       {::hydra/returns (hydra/id Persona)})
-;;      (hydra/post-operation
-;;       {::hydra/expects (hydra/id Persona)
-;;        ::hydra/returns (hydra/id Persona)})]}))
-
-;; (def Paciente
-;;   (hydra/class
-;;    {::hydra/id (persona "Paciente")
-;;     ::hydra/title "Paciente"
-;;     ::hydra/description "Un paciente"
-;;     ::hydra/supported-properties                                   
-;;     [info-basica-link
-;;      (hydra/supported-property
-;;       {::hydra/property tieneFechaDeNacimiento
-;;        ::hydra/required true})]
-;;     ::hydra/operations
-;;     [(hydra/get-operation {::hydra/returns (persona "Paciente")})
-;;      (hydra/delete-operation {})]}))
-
-
-;; (def Medico
-;;   (hydra/class
-;;    {::hydra/id (persona "Medico")
-;;     ::hydra/title "Medico"
-;;     ::hydra/description "Un médico"
-;;     ::hydra/supported-properties                                   
-;;     [info-basica-link
-;;      (hydra/supported-property
-;;       {::hydra/property tieneCedulaProfesional
-;;        ::hydra/required true})]
-;;     ::hydra/operations
-;;     [(hydra/get-operation {::hydra/returns (persona "Medico")})
-;;      (hydra/delete-operation {})]}))
+(def Paciente
+  (owlm/owl-class-to-hydra
+   "persona:Paciente"
+   [(hydra/get-operation
+     {::hydra/id (persona "get-paciente")
+      ::hydra/title "Obtiene un paciente"
+      ::hydra/description "Obtiene un paciente"
+      ::hydra/returns (persona "Paciente")})
+    (hydra/delete-operation
+     {::hydra/id (persona "delete-paciente")
+      ::hydra/title "Elimina un paciente"
+      ::hydra/description "Elimina un paciente"})]))
+(register-class Paciente)
 
 ;; Collections
 
@@ -135,15 +57,27 @@
   (hydra/collection
    {::hydra/id (persona "PersonaCollection")
     ::hydra/title "PersonaCollection"
-    ::hydra/description "Colleción de todas las personas"
+    ::hydra/description "Coleción de todas las personas"
     ::hydra/is-paginated false
-    ::hydra/member-class (hydra/id Persona)
-    ::hydra/supported-properties []
-    ;; ::hydra/operations
-    ;; [(hydra/get-operation
-    ;;   {::hydra/returns (persona "PersonaCollection")})
-    ;;  (hydra/post-operation
-    ;;   {::hydra/expects (hydra/id Persona)
-    ;;    ::hydra/returns (hydra/id Persona)})]
-    }))
+    ::hydra/member-class (hydra/id Persona)}))
 (register-class PersonaCollection)
+
+
+(def MedicoCollection
+  (hydra/collection
+   {::hydra/id (persona "MedicoCollection")
+    ::hydra/title "MedicoCollection"
+    ::hydra/description "Coleción de todos los médicos"
+    ::hydra/is-paginated false
+    ::hydra/member-class (hydra/id Medico)}))
+(register-class MedicoCollection)
+
+
+(def PacienteCollection
+  (hydra/collection
+   {::hydra/id (persona "PacienteCollection")
+    ::hydra/title "PacienteCollection"
+    ::hydra/description "Coleción de todos los pacientes"
+    ::hydra/is-paginated false
+    ::hydra/member-class (hydra/id Paciente)}))
+(register-class PacienteCollection)

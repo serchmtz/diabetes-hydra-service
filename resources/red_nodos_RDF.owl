@@ -86,7 +86,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.diabetes-mexico.org/red#resideEn">
         <rdfs:domain rdf:resource="http://www.personas-mexico.org/persona#Paciente"/>
-        <rdfs:range rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+        <rdfs:range rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
     </owl:ObjectProperty>
     
 
@@ -417,7 +417,7 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#resideEn"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.estados-mexico.org/estados#Localización_Geografica"/>
+                        <owl:onClass rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.diabetes-mexico.org/red#tieneEscolaridad"/>

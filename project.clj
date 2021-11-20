@@ -19,9 +19,9 @@
                    org.apache.httpcomponents/httpclient
                    org.apache.httpcomponents/httpclient-cache
                    commons-logging]]
-                 [levanzo "0.2.4"]
                  [com.novemberain/monger "3.5.0"]
-                 ;; [serchmtz/levanzo "5150d157b25baf47659424791f5d7fd4d486c24b"]
+                 ;; [levanzo "0.2.4"]
+                 [serchmtz/levanzo "39b7170cd47d12896ee5ecc417d14bd78e6c12d9"]
                  [http-kit "2.5.3"]]
   :main diabetes-hydra-service.core
   :uberjar-name "diabetes-hydra-service.jar"

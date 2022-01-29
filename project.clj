@@ -20,12 +20,13 @@
                    org.apache.httpcomponents/httpclient-cache
                    commons-logging]]
                  [com.novemberain/monger "3.5.0"]
-                 ;; [levanzo "0.2.4"]
-                 [serchmtz/levanzo "39b7170cd47d12896ee5ecc417d14bd78e6c12d9"]
+                 ;;[levanzo "0.2.4"]
+                 [serchmtz/levanzo "4ece4e954e9df28baf120fd3ad49ad4998c5d551"]
                  [http-kit "2.5.3"]]
   :main diabetes-hydra-service.core
   :uberjar-name "diabetes-hydra-service.jar"
-  :profiles {:uberjar {:aot :all}
+  :profiles {:uberjar {:aot :all
+                       :dependencies [[ring/ring-devel "1.9.4"]]}
              :dev {:dependencies [[ring/ring-devel "1.9.4"]]}}
   :repl-options {:init-ns diabetes-hydra-service.core})
 

@@ -13,6 +13,26 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.estados-mexico.org/estados#tieneNombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.estados-mexico.org/estados#tieneNombre">
+        <rdfs:domain rdf:resource="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +43,14 @@
 
     <!-- http://www.estados-mexico.org/estados#Localizacion_Geografica -->
 
-    <owl:Class rdf:about="http://www.estados-mexico.org/estados#Localizacion_Geografica"/>
+    <owl:Class rdf:about="http://www.estados-mexico.org/estados#Localizacion_Geografica">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.estados-mexico.org/estados#tieneNombre"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 

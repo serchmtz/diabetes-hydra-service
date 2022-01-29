@@ -29,15 +29,25 @@
           headers (assoc headers "Link" (str "<" config/base "api/vocab>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""))
           response (assoc response :status 200)          
           response (assoc response :headers headers)
-          body (json/generate-string {"@context" ["https://www.w3.org/ns/hydra/core"
-                                                  
-                                                  (merge
-                                                   @lns/*ns-register*
-                                                   {"@base" config/base
-                                                    "@vocab" (vocab)
-                                                    "personas" {"@id" (vocab "personas")
-                                                                "@type" "@id"}})]})]
-      (if (= uri "/context.jsonld")
+          body (json/generate-string
+                {"@context" ["https://www.w3.org/ns/hydra/core"                                                  
+                             (merge
+                              @lns/*ns-register*
+                              {"@base" config/base
+                               "@vocab" (vocab)
+                               "medicos" {"@id" (vocab "medicos")
+                                          "@type" "@id"}
+                               "localizaciones" {"@id" (vocab "localizaciones")
+                                                 "@type" "@id"}
+                               "pacientes" {"@id" (vocab "pacientes")
+                                            "@type" "@id"}
+                               "historias" {"@id" (vocab "historias")
+                                            "@type" "@id"}
+                               "expedientes" {"@id" (vocab "expedientes")
+                                              "@type" "@id"}
+                               "notas" {"@id" (vocab "notas")
+                                        "@type" "@id"}})]})]
+      (if (= uri "/api/context.jsonld")
         (assoc response :body body)
         response))))
 

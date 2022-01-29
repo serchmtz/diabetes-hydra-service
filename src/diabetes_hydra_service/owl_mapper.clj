@@ -8,27 +8,9 @@
    [tawny.read :as twr]
    [levanzo.hydra :as hydra])
   (:import
-   [org.semanticweb.owlapi.model OWLDataOneOf]
+   [org.semanticweb.owlapi.model OWLDataOneOf]  
+   org.semanticweb.owlapi.search.EntitySearcher 
    org.semanticweb.owlapi.util.AutoIRIMapper))
-
-
-;; (clojure.java.javadoc/add-remote-javadoc "org.semanticweb." "http://owlcs.github.io/owlapi/apidocs_4/")
-;; (clojure.java.javadoc/add-remote-javadoc "net.sourceforge." "http://owlcs.github.io/owlapi/apidocs_4/")
-;; (clojure.java.javadoc/add-remote-javadoc "uk.ac.manchester." "http://owlcs.github.io/owlapi/apidocs_4/")
-;; (r/defread red
-;;   :location (owl/iri (io/resource "red_nodos_RDF.owl"))
-;;   :prefix "red"
-;;   :iri "http://www.diabetes-mexico.org/red"
-;;   :viri "http://www.diabetes-mexico.org/red"
-;;   :mapper (AutoIRIMapper. (io/file "resources") true))
-
-;; (r/defread wine
-;;  :location (owl/iri (io/resource "wine.rdf"))
-;;  :prefix "wine#"
-;;  :iri "http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#"
-;;  :viri "http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#"
-;;  :mapper (AutoIRIMapper. (io/file "resources") true))
-
 
 (twr/defread red-ont
   :location (owl/iri (io/resource "red_nodos_RDF.owl"))
@@ -39,7 +21,7 @@
 
 (rs/reasoner-silent)
 (rs/reasoner-factory :hermit)
-;;(rs/consistent? red)
+
 
 (owl/defno get-prefix
   [onto]
@@ -150,6 +132,7 @@
          sprops (->> (concat dprops oprops)
                      (map #(hydra/supported-property
                             {::hydra/property (prop-map-to-hydra %)
+                             ::hydra/title (:prop-name %)
                              ::hydra/required false})))]
      (hydra/class
       {::hydra/id (l/named-entity-as-string owlclass)
@@ -158,3 +141,22 @@
        (vec sprops)
        ::hydra/operations
        operations}))))
+
+
+(defn update-supported-property
+  [hydra-class prop-id supported-prop]
+  (update hydra-class
+          :supported-properties
+          (fn [props]
+            (->> props
+                 (remove #(= (-> % :property hydra/id)
+                             prop-id))
+                 (concat [supported-prop])))))
+
+
+(-> 
+ (q/map-imports #(.getDataPropertyRangeAxioms % (get-prefixed-data-prop "persona:tieneNombre")) red-ont)
+ first
+ )
+
+(type red-ont)

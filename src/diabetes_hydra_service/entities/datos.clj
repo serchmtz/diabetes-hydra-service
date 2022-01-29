@@ -125,8 +125,8 @@
 (def HistoriaClinicaCollection
   (hydra/collection
    {::hydra/id (datos "HistoriaClinicaCollection")
-    ::hydra/title "ExpedienteClinicoCollection"
-    ::hydra/description "Coleción de expedientes clínicos"
+    ::hydra/title "HistoriaClinicaCollection"
+    ::hydra/description "Coleción de historias clínicas"
     ::hydra/is-paginated false
     ::hydra/member-class (hydra/id HistoriaClinica)
     ::hydra/operations

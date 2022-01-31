@@ -35,7 +35,7 @@
   (hydra/collection
    {::hydra/id (datos "NotaMedicaCollection")
     ::hydra/title "NotaMedicaCollection"
-    ::hydra/description "Coleción de notas médicas"
+    ::hydra/description "Colección de notas médicas"
     ::hydra/is-paginated false
     ::hydra/member-class (hydra/id NotaMedica)
     ::hydra/operations
@@ -88,7 +88,7 @@
   (hydra/collection
    {::hydra/id (datos "ExpedienteClinicoCollection")
     ::hydra/title "ExpedienteClinicoCollection"
-    ::hydra/description "Coleción de expedientes clínicos"
+    ::hydra/description "Colección de expedientes clínicos"
     ::hydra/is-paginated false
     ::hydra/member-class (hydra/id ExpedienteClinico)
     ::hydra/operations
@@ -126,7 +126,7 @@
   (hydra/collection
    {::hydra/id (datos "HistoriaClinicaCollection")
     ::hydra/title "HistoriaClinicaCollection"
-    ::hydra/description "Coleción de historias clínicas"
+    ::hydra/description "Colección de historias clínicas"
     ::hydra/is-paginated false
     ::hydra/member-class (hydra/id HistoriaClinica)
     ::hydra/operations

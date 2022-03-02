@@ -8,7 +8,14 @@
 
 (tawny.owl/ontology-to-namespace owlm/red-ont)
 
-(def Biotipo (owlm/owl-class-to-hydra "datos:Biotipo"))
+(def Biotipo
+  (owlm/owl-class-to-hydra
+   "datos:Biotipo"
+   [(hydra/get-operation
+     {::hydra/id (datos "get-biotipo")
+      ::hydra/title "Obtiene un biotipo"
+      ::hydra/description "Obtiene un biotipo"
+      ::hydra/returns (datos "Biotipo")})]))
 (register-class Biotipo)
 
 (def NotaMedica

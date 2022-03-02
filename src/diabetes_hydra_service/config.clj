@@ -3,7 +3,7 @@
             [levanzo.payload :as payload]            
             [clojure.string :as string]))
 (def db-uri (or (System/getenv "DB_URI")
-                "mongodb+srv://db-admn:jAa4Z2QJFDDzjLHX@diabetes-hydra-cluster.qdkfo.mongodb.net/diabetesdb?retryWrites=true&w=majority"))
+                "mongodb://localhost:27017"))
 (def protocol (or (System/getenv "PROTOCOL") "http"))
 (def port (Integer/parseInt (or (System/getenv "PORT") "8080")))
 (def host (or (System/getenv "HOST") "localhost"))

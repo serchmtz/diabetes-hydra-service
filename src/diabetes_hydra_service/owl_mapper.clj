@@ -154,9 +154,9 @@
                  (concat [supported-prop])))))
 
 
-(-> 
- (q/map-imports #(.getDataPropertyRangeAxioms % (get-prefixed-data-prop "persona:tieneNombre")) red-ont)
- first
- )
+;; (-> 
+;;  (q/map-imports #(.getDataPropertyRangeAxioms % (get-prefixed-data-prop "persona:tieneNombre")) red-ont)
+;;  first
+;;  )
 
-(type red-ont)
+;; (type red-ont)

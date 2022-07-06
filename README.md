@@ -1,22 +1,17 @@
-# diabetes-hydra-service
+# Diabetes Hydra Service
 
-A Clojure library designed to ... well, that part is up to you.
+This project implements an Hypermedia RESTful API that conforms [Hydra Core
+Vocabulary](http://www.hydra-cg.com/spec/latest/core/)
 
-## Usage
+The project was part of my internship program that has the goal to develop a
+semantic web service that take avantage of a large OWL onthology. To accomplish
+this, I used linked data techologies such as JSON-LD and Hydra Core. The library
+used to expose the API is a modified version of
+[levanzo](https://github.com/antoniogarrote/levanzo). I only added some JSON-LD
+1.1 features (external context)
+[here](https://github.com/serchmtz/levanzo/tree/feature/external-context).
 
-FIXME
+## Explore the API
 
-## License
-
-Copyright © 2021 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+The API is hosted in Heroku and can be explored using the [Hydra Client](https://diabetes-hydra-client.vercel.app/)
+developed to that propurse. The GitHub repo of the client is [here](https://github.com/serchmtz/diabetes-hydra-client)

@@ -1,6 +1,6 @@
 # Diabetes Hydra Service
 
-This project implements an Hypermedia RESTful API that conforms the [Hydra Core
+This project implements a Hypermedia RESTful API that conforms the [Hydra Core
 Vocabulary](http://www.hydra-cg.com/spec/latest/core/)
 
 The project was part of my internship program, the goal was to develop a
